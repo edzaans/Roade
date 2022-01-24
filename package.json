@@ -1,0 +1,16 @@
+{
+  "name": "roade",
+  "version": "1.0.0",
+  "description": "ROADE APP",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "author": "Edgars, Katarzyna, Sarah",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
