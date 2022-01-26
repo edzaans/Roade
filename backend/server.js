@@ -1,7 +1,7 @@
 // Import Express framework
 const express = require("express");
 // Import test data
-const posts = require("./data/posts");
+const posts = require("../frontend/src/data/posts");
 // Import DOTENV
 const dotenv = require("dotenv");
 
@@ -19,7 +19,7 @@ app.get("/api/posts", (req, res) => {
   res.json(posts);
 });
 
-// Get posts with ID
+// Get TEST posts with ID
 app.get("/api/posts/:id", (req, res) => {
   //Filter POSTS array with params ID number
   const post = posts.find((n) => {
