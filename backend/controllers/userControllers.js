@@ -1,6 +1,10 @@
 const asyncHandler = require("express-async-handler");
 
+// Import User module
 const User = require("../models/userModel");
+
+// Generates JWT token
+const generateToken = require("../utils/generateToken");
 
 // Register function
 const registerUser = asyncHandler(async (req, res) => {
@@ -24,6 +28,7 @@ const registerUser = asyncHandler(async (req, res) => {
       email: user.email,
       picture: user.picture,
       isAdmin: user.isAdmin,
+      token: generateToken(user._id),
     });
   } else {
     res.status(400);
@@ -31,12 +36,15 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 });
 
+// ****************************************************************//
+
 // Login function
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
+  // Check if user is registered and FIND
   const user = await User.findOne({ email });
 
-  // Ceck if USER nd if password is crrect
+  // Ceck if USER nd if password is crrect,display returned data
 
   if (user && (await user.matchPassword(password))) {
     res.json({
@@ -45,6 +53,7 @@ const authUser = asyncHandler(async (req, res) => {
       email: user.email,
       picture: user.picture,
       isAdmin: user.isAdmin,
+      token: generateToken(user._id),
     });
   } else {
     res.status(400);

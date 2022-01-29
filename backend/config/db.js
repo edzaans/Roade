@@ -1,6 +1,7 @@
 // Import MONGOOSE
 const mongoose = require("mongoose");
 
+// Create MONGO connection, pull config from .ENV
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGO_URI, {

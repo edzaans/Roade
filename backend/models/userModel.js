@@ -1,5 +1,6 @@
+//Import Mongoose
 const mongoose = require("mongoose");
-
+// Import bcrypt package for decrypt/encrypt
 const bcrypt = require("bcryptjs");
 
 // Create MONGO schema
