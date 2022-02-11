@@ -7,14 +7,14 @@ const bcrypt = require("bcryptjs");
 const userSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
+    number: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
     isAdmin: { type: Boolean, required: true, default: false },
     picture: {
       type: String,
       required: true,
-      default:
-        "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRDbteaAViexCf6H6EyRlyNKw60aF-13GoCdjpY2w7b9nrcUCaWcT4FXgUdbOLYyhKfRQdwyhOkP-jBsAlpb73_u2AbGkjVUFyLayd5u3SpjU22u5xIXh5Ouw&usqp=CAc",
+      default: "https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png",
     },
   },
   {
