@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap");
+
+.main-back {
+  min-height: 85vh;
+  display: flex;
+  padding: 10px 0;
+}
+
+.page {
+  width: 100%;
+}
+
+.heading {
+  font-size: 2rem;
+  font-family: "Work Sans", sans-serif;
+  padding: 20px 10px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,40 @@
+.icon_fb {
+  color: rgb(9, 94, 163);
+  font-size: 5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+
+.icon_insta {
+  color: rgb(243, 210, 24);
+  font-size: 5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+
+.icon_twitter {
+  color: #55acee;
+
+  font-size: 5rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+
+.icon:hover {
+  opacity: 0.7;
+}
+
+.footer {
+  background-color: rgb(49, 44, 44);
+}
+
+.links {
+  text-decoration: none;
+  color: #c55033;
+}

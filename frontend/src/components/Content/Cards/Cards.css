@@ -1,0 +1,59 @@
+.quote_container {
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  padding: 50px 0px;
+}
+
+.quote_container h2 {
+  padding: 30px 0px;
+  font-weight: 700;
+}
+.quote_container h4 {
+  padding: 20px 0px;
+}
+
+.quote_container span {
+  font-size: 2rem;
+}
+
+/* On hover effect */
+/* .quote_col:hover {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  color: rgb(10, 88, 99);
+  text-shadow: 2px px 2px rgb(252, 246, 246);
+  transition: all 0.5s ease-in-out;
+}
+ */
+.quote_icon {
+  border-radius: 50%;
+  font-size: 5em;
+  color: rgb(11, 179, 25);
+  text-shadow: 2px px 2px rgb(252, 246, 246);
+  margin-left: 45%;
+  margin-top: 2rem;
+}
+
+.quote_p {
+  font-size: 1.1rem;
+}
+
+h4 {
+  text-align: center;
+  margin: 1rem 1rem;
+  color: rgb(226, 82, 14);
+}
+
+.canvas {
+  text-align: center !important;
+  color: lightcoral;
+  height: auto;
+}
+
+hr {
+  margin: 0px auto;
+  width: 90%;
+}
