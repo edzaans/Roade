@@ -5,6 +5,7 @@ import {
   Button,
   Overlay,
   Offcanvas,
+  Image,
 } from "react-bootstrap";
 import "./Cards.css";
 
@@ -14,6 +15,9 @@ import { SiAntdesign } from "react-icons/si";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { GiRoad } from "react-icons/gi";
 import { useRef, useState } from "react";
+
+// Import ROADE logout
+const van = require("../../../assets/images/van.jpg");
 
 function Cards() {
   const [show, setShow] = useState(false);
@@ -244,7 +248,104 @@ function Cards() {
               </Row>
             </Col>
           </Row>
+
+          {/* Responsive content */}
+          <div className="row ">
+            <div className="col-md-6 order-md-2">
+              {" "}
+              <div>
+                <h4>Favorited</h4>
+
+                <p>
+                  We implement our mission using modern technologies, employee
+                  involvement and creating a work environment based on values.
+                  Roade team consists of ambitious and committed people who
+                  derive joy and satisfaction from everyday work. We create a
+                  friendly workplace.
+                </p>
+                <div className="text-center">
+                  <Button
+                    className="mb-5"
+                    variant="primary"
+                    onClick={handleShow}
+                  >
+                    Read more...
+                  </Button>
+                </div>
+
+                <Offcanvas placement="start" show={show} onHide={handleClose}>
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Technology that delivers</Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    <div className="canvas">
+                      As an employer looking for an employee, you have great
+                      opportunities. If you want to receive many applications,
+                      all you must do is post an advertisement on our portal.
+                      Unlike other portals, Roade is designed with logistics and
+                      transportation industry in mind. Why is it worth choosing
+                      ours? By using our service, you will reach a wide group of
+                      skilled drivers . As we know that the needs of employers
+                      are specialized, we decided to create a portal
+                      specializing in the selected industry.
+                    </div>
+                  </Offcanvas.Body>
+                </Offcanvas>
+              </div>
+            </div>
+            <div className="col-md-6 order-md-1">
+              <img src={van} alt="" className="img-fluid" />
+            </div>
+          </div>
+          <div className="row ">
+            <div className="col-md-6 order-md-1">
+              {" "}
+              <div>
+                <h4>Favorited</h4>
+
+                <p>
+                  We implement our mission using modern technologies, employee
+                  involvement and creating a work environment based on values.
+                  Roade team consists of ambitious and committed people who
+                  derive joy and satisfaction from everyday work. We create a
+                  friendly workplace.
+                </p>
+                <div className="text-center">
+                  <Button
+                    className="mb-5"
+                    variant="primary"
+                    onClick={handleShow}
+                  >
+                    Read more...
+                  </Button>
+                </div>
+
+                <Offcanvas placement="start" show={show} onHide={handleClose}>
+                  <Offcanvas.Header closeButton>
+                    <Offcanvas.Title>Technology that delivers</Offcanvas.Title>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                    <div className="canvas">
+                      As an employer looking for an employee, you have great
+                      opportunities. If you want to receive many applications,
+                      all you must do is post an advertisement on our portal.
+                      Unlike other portals, Roade is designed with logistics and
+                      transportation industry in mind. Why is it worth choosing
+                      ours? By using our service, you will reach a wide group of
+                      skilled drivers . As we know that the needs of employers
+                      are specialized, we decided to create a portal
+                      specializing in the selected industry.
+                    </div>
+                  </Offcanvas.Body>
+                </Offcanvas>
+              </div>
+            </div>
+            <div className="col-md-6 order-md-2">
+              <img src={van} alt="" className="img-fluid" />
+            </div>
+          </div>
         </Container>
+        {/* test rows */}
       </div>
     </div>
   );

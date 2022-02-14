@@ -4,9 +4,9 @@ import emailjs from "emailjs-com";
 import "./Contact.css";
 import { Button, Container, Image, Row } from "react-bootstrap";
 // Import Icon name to be used ( use as a component in code )
-import { ImLocation } from "react-icons/im";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
+import { FcViewDetails } from "react-icons/fc";
+import { FcCallback } from "react-icons/fc";
+import { FcContacts } from "react-icons/fc";
 
 // Contact Us header picture
 const contact = require("../../assets/images/ContactUs.jpg");
@@ -126,7 +126,7 @@ export const Contact = () => {
           <ul class="list-unstyled mb-0">
             <li>
               <span>
-                <ImLocation />
+                <FcViewDetails className="icon" />
               </span>
 
               <p>Galway, IE</p>
@@ -134,14 +134,14 @@ export const Contact = () => {
 
             <li>
               <span>
-                <BsFillTelephoneFill />
+                <FcCallback className="icon" />
               </span>
               <p>0123456789</p>
             </li>
 
             <li>
               <span>
-                <MdEmail />
+                <FcContacts className="icon" />
               </span>
 
               <p>contact@roade.com</p>
