@@ -3,6 +3,7 @@ import { Button, Carousel } from "react-bootstrap";
 import Slide from "../../components/Slide/Slide";
 import Cards from "../../components/Content/Cards/Cards";
 import About from "../../components/Content/About/About";
+import WorkWithUs from "../../components/Content/WorkWithUs/WorkWithUs";
 
 const test1 = require("../../assets/images/bg-showcase-1.jpg");
 const test2 = require("../../assets/images/bg-showcase-2.jpg");
@@ -24,15 +25,16 @@ function LandingPage() {
       <Slide></Slide>
       <Cards></Cards>
       <About></About>
+      <WorkWithUs></WorkWithUs>
 
-      <div className="my-5 mr-auto text-center">
+      {/*   <div className="my-5 mr-auto text-center">
         <a href="/login" className="">
           <Button className="btn btn-success mx-2">Log In</Button>
         </a>
         <a href="/register" className="">
           <Button className="btn btn-info mx-2">Sign Up</Button>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }

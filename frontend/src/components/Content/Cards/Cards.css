@@ -1,10 +1,9 @@
 .quote_container {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(230, 236, 240);
   width: auto;
   height: auto;
   text-align: center;
   align-items: center;
-  padding: 50px 0px;
 }
 
 .quote_container h2 {
@@ -43,7 +42,7 @@
 
 h4 {
   text-align: center;
-  margin: 1rem 1rem;
+
   color: rgb(226, 82, 14);
 }
 
@@ -56,4 +55,8 @@ h4 {
 hr {
   margin: 0px auto;
   width: 90%;
+}
+
+img {
+  border-radius: 2%;
 }

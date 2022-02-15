@@ -85,7 +85,7 @@ function About() {
         </div>
       </div>
 
-      <Container>
+      {/*   <Container>
         <Row>
           <div className="card__containers">
             <Col xs={12} md={6} className="card__content">
@@ -117,7 +117,7 @@ function About() {
             </Col>
           </div>
         </Row>
-      </Container>
+      </Container> */}
     </div>
   );
 }
