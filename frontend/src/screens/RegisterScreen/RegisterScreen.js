@@ -5,11 +5,18 @@ import "./RegisterScreen.css";
 import ErrorMessage from "../../components/ErrorMessage";
 import Loading from "../../components/Loading";
 import { useHistory } from "react-router-dom";
-
+//Redux imports
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "../../actions/userActions";
+// Import React Icons
+import { GoDiffRenamed } from "react-icons/go";
+import { AiOutlineFieldNumber } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { MdRepeat } from "react-icons/md";
 
-const logo = require("../../assets/images/Logo3.png");
+// Import assets
+const logo = require("../../assets/images/Logo_Icon.png");
 
 const RegisterScreen = ({ history }) => {
   // Set states for all inputstate
@@ -61,7 +68,9 @@ const RegisterScreen = ({ history }) => {
                 <div class="input-group mb-3">
                   <div class="input-group-append">
                     <span class="input-group-text">
-                      <i class="fas fa-user"></i>
+                      <i>
+                        <GoDiffRenamed></GoDiffRenamed>
+                      </i>
                     </span>
                   </div>
                   <input
@@ -78,7 +87,9 @@ const RegisterScreen = ({ history }) => {
                 <div class="input-group mb-3">
                   <div class="input-group-append">
                     <span class="input-group-text">
-                      <i class="fas fa-user"></i>
+                      <i>
+                        <AiOutlineFieldNumber></AiOutlineFieldNumber>
+                      </i>
                     </span>
                   </div>
                   <input
@@ -94,7 +105,9 @@ const RegisterScreen = ({ history }) => {
                 <div class="input-group mb-3">
                   <div class="input-group-append">
                     <span class="input-group-text">
-                      <i class="fas fa-user"></i>
+                      <i>
+                        <AiOutlineMail></AiOutlineMail>
+                      </i>
                     </span>
                   </div>
                   <input
@@ -107,10 +120,12 @@ const RegisterScreen = ({ history }) => {
                   />
                 </div>
                 {/* Company password */}
-                <div class="input-group mb-2">
+                <div class="input-group mb-3">
                   <div class="input-group-append">
                     <span class="input-group-text">
-                      <i class="fas fa-key"></i>
+                      <i>
+                        <RiLockPasswordLine></RiLockPasswordLine>
+                      </i>
                     </span>
                   </div>
                   <input
@@ -123,10 +138,12 @@ const RegisterScreen = ({ history }) => {
                   />
                 </div>
                 {/* Confirm password */}
-                <div class="input-group mb-2">
+                <div class="input-group mb-3">
                   <div class="input-group-append">
                     <span class="input-group-text">
-                      <i class="fas fa-key"></i>
+                      <i>
+                        <MdRepeat></MdRepeat>
+                      </i>
                     </span>
                   </div>
                   <input

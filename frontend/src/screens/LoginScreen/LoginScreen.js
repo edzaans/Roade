@@ -10,7 +10,7 @@ import ErrorMessage from "../../components/ErrorMessage";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../actions/userActions";
 // Assign Company logo to variable
-const logo = require("../../assets/images/Logo3.png");
+const logo = require("../../assets/images/Logo_Icon.png");
 
 // Main Login Screen function
 const LoginScreen = ({ history }) => {
