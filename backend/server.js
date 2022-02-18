@@ -10,11 +10,14 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 // Import Routes from userRoutes
 const userRoutes = require("./routes/userRoutes");
+// Import Routes from noteRoutes
+const postRoutes = require("./routes/postRoutes");
 
 // Import test data
-const posts = require("../frontend/src/data/posts");
+//const posts = require("../frontend/src/data/posts");
 // Import MIDDLEWARE from folder
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
+const router = require("./routes/postRoutes");
 
 app.use(cors());
 // Set up HEADERS to be used by CORS
@@ -39,9 +42,10 @@ app.get("/", (req, res) => {
   res.send("Api is running");
 });
 
-app.get("/api/posts", (req, res) => {
+// Test data from INTERNAL JSON FILE
+/* app.get("/api/posts", (req, res) => {
   res.json(posts);
-});
+}); */
 
 // Get TEST posts with ID
 /* app.get("/api/posts/:id", (req, res) => {
@@ -54,6 +58,10 @@ app.get("/api/posts", (req, res) => {
  */
 
 app.use("/api/users", userRoutes);
+
+// Route to GET all posts!!!!!!!!
+app.use("/api/posts", postRoutes);
+// Route to CREATE posts!!!!
 
 app.use(notFound);
 app.use(errorHandler);
