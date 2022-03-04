@@ -1,16 +1,17 @@
 const posts = [
   {
     _id: "1",
-    title: "Day 1 of college",
+    title: "Full time driver",
     content:
-      "I made a few new friends and introduced myself to a lot of new teachers.",
-    category: "College",
+      "We're expanding our Team and have several vacancies for Delivery Drivers, Wholesale & Vending Machine Merchandisers for Saturday and Sundays only. We have 10hr and 8hr shifts available along with flexible start times.To apply you must have a Full B Driving Licence, excellent customer service and time management skills along with the motivation to get the job done well.You will be work weekends with guaranteed hours. You will receive full training (an induction followed by on the job training) along with Manual Handling and Covid-19 compliance training. You will receive a full uniform and PPE.",
+    category: "Full Time",
   },
   {
     _id: "2",
-    title: "Learned some Node JS",
-    content: "Learned how to create a server in node JS and my first API",
-    category: "Learning",
+    title: "Part time driver needed",
+    content:
+      "We're expanding our Team and have several vacancies for Delivery Drivers, Wholesale & Vending Machine Merchandisers for Saturday and Sundays only. We have 10hr and 8hr shifts available along with flexible start times.To apply you must have a Full B Driving Licence, excellent customer service and time management skills along with the motivation to get the job done well.You will be work weekends with guaranteed hours. You will receive full training (an induction followed by on the job training) along with Manual Handling and Covid-19 compliance training. You will receive a full uniform and PPE.",
+    category: "Part time",
   },
   {
     _id: "3",

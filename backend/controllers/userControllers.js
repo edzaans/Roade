@@ -8,7 +8,7 @@ const generateToken = require("../utils/generateToken");
 
 // Register function
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, number, email, password, picture } = req.body;
+  const { name, email, number, password, picture } = req.body;
 
   // Check if user exists in database, pass find param
   const userExists = await User.findOne({ email });
@@ -19,14 +19,15 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   // Create new user if not already registered
-  const user = await User.create({ name, number, email, password, picture });
+  const user = await User.create({ name, email, number, password, picture });
   // Check if registered
   if (user) {
     res.status(201).json({
       _id: user._id,
       name: user.name,
-      number: user.number,
       email: user.email,
+      number: user.number,
+
       picture: user.picture,
       isAdmin: user.isAdmin,
       token: generateToken(user._id),
@@ -51,8 +52,9 @@ const authUser = asyncHandler(async (req, res) => {
     res.json({
       _id: user._id,
       name: user.name,
-      number: user.number,
       email: user.email,
+      number: user.number,
+
       picture: user.picture,
       isAdmin: user.isAdmin,
       token: generateToken(user._id),

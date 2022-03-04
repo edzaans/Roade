@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 //import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { faMobileAlt, faThumbsUp, faPencilAlt, faLaugh } from "@fortawesome/free-solid-svg-icons";
 import "animate.css";
-import "./About.css";
+/* import "./About.css"; */
 // Import custom carousel and controls
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";

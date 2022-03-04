@@ -14,7 +14,7 @@ const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
 
 // Import test data
-//const posts = require("../frontend/src/data/posts");
+const posts = require("../frontend/src/data/posts");
 // Import MIDDLEWARE from folder
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const router = require("./routes/postRoutes");
@@ -41,21 +41,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Api is running");
 });
-
-// Test data from INTERNAL JSON FILE
-/* app.get("/api/posts", (req, res) => {
-  res.json(posts);
-}); */
-
-// Get TEST posts with ID
-/* app.get("/api/posts/:id", (req, res) => {
-  //Filter POSTS array with params ID number
-  const post = posts.find((n) => {
-    return n._id === req.params.id;
-  });
-  res.send(post);
-});
- */
 
 app.use("/api/users", userRoutes);
 

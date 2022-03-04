@@ -22,10 +22,11 @@ const RegisterScreen = ({ history }) => {
   // Set states for all inputstate
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [picture, setPicture] = useState(
     "https://www.pngarts.com/files/3/Avatar-PNG-Download-Image.png"
   );
-  const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState(null);

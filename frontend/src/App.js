@@ -9,6 +9,7 @@ import LoginScreen from "./screens/LoginScreen/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
 import { Contact } from "../src/components/Contact/Contact";
 import RSAinfo from "../src/components/RSA/RSAinfo";
+import CreatePost from "../src/screens/Create_Post/Create_Post";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/register" component={RegisterScreen} exact></Route>
         <Route path="/contact" component={Contact} exact></Route>
         <Route path="/rsa" component={RSAinfo} exact></Route>
+        <Route path="/createpost" component={CreatePost} exact></Route>
       </main>
 
       <Footer />

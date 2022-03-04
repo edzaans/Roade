@@ -1,12 +1,25 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import MainScreen from "../../components/MainScreen";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import Loading from "../../components/Loading";
+import ErrorMessage from "../../components/ErrorMessage";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { listPosts } from "../../actions/postsActions";
 
 function MyPosts() {
-  const [posts, setPosts] = useState([]);
+  const dispatch = useDispatch();
+
+  const postList = useSelector((state) => state.postList);
+  const { loading, posts, error } = postList;
+
+  const postCreate = useSelector((state) => state.postCreate);
+  const { success: successCreate } = postCreate;
+
+  // Get username thats logged in from State
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
   // Delete POST function
   const deleteHandler = (id) => {
@@ -15,32 +28,29 @@ function MyPosts() {
     }
   };
 
-  // Fetch notes and assign to variables
-  const fetchPosts = async () => {
-    const { data } = await axios.get("api/posts");
-    // Store data drom API in STATE
-    setPosts(data);
-  };
   console.log(posts);
+
+  const history = useHistory();
 
   // Create useEffect when component is rendered
   useEffect(() => {
     // Pass async function
-    fetchPosts();
-  }, []);
-
-  // Get username thats logged in from State
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
+    dispatch(listPosts());
+    if (!userInfo) {
+      history.push("/");
+    }
+  }, [dispatch]);
 
   return (
     <div className="text-center">
-      <MainScreen title={`Welcome Back ${userInfo && userInfo.name}`}>
-        <Link to="createPost">
+      <MainScreen title={`Welcome Back ${userInfo.name}`}>
+        <Link to="/createpost">
           <Button className="my-2">Create Posting</Button>
         </Link>
         {/* Map over Test data */}
-        {posts.map((post) => {
+        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {loading && <Loading />}
+        {posts?.map((post) => {
           return (
             <Accordion key={post._id}>
               <Card className="mx-2 my-3">
@@ -86,7 +96,10 @@ function MyPosts() {
                   <blockquote className="blockquote mb-0">
                     <p style={{ fontSize: "1rem" }}>{post.content}</p>
                     <footer className="blockquote-footer">
-                      Created on : date
+                      Created on :{" "}
+                      <cite title="Source Title">
+                        {post.createdAt.substring(0, 10)}
+                      </cite>
                     </footer>
                   </blockquote>
                 </Card.Body>
