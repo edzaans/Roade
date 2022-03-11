@@ -10,6 +10,7 @@ import RegisterScreen from "./screens/RegisterScreen/RegisterScreen";
 import { Contact } from "../src/components/Contact/Contact";
 import RSAinfo from "../src/components/RSA/RSAinfo";
 import CreatePost from "../src/screens/Create_Post/Create_Post";
+import SinglePost from "./screens/SinglePost/SinglePost";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" component={Contact} exact></Route>
         <Route path="/rsa" component={RSAinfo} exact></Route>
         <Route path="/createpost" component={CreatePost} exact></Route>
+        <Route path="/posts/:id" component={SinglePost}></Route>
       </main>
 
       <Footer />

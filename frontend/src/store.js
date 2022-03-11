@@ -4,7 +4,12 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 // Import redux thunk
 import thunk from "redux-thunk";
-import { postCreateReducer, postListReducer } from "./reducers/postsReducers";
+import {
+  postCreateReducer,
+  postDeleteReducer,
+  postListReducer,
+  postUpdateReducer,
+} from "./reducers/postsReducers";
 import { userLoginReducer, userRegisterReducer } from "./reducers/userReducers";
 
 const reducer = combineReducers({
@@ -13,6 +18,8 @@ const reducer = combineReducers({
   userRegister: userRegisterReducer,
   postList: postListReducer,
   postCreate: postCreateReducer,
+  postUpdate: postUpdateReducer,
+  postDelete: postDeleteReducer,
 });
 
 const userInfoFromLocalStorage = localStorage.getItem("userInfo")

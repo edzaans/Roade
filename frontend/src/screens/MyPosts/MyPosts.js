@@ -6,7 +6,8 @@ import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { listPosts } from "../../actions/postsActions";
+
+import { listPosts, deletePostAction } from "../../actions/postsActions";
 
 function MyPosts() {
   const dispatch = useDispatch();
@@ -14,24 +15,25 @@ function MyPosts() {
   const postList = useSelector((state) => state.postList);
   const { loading, posts, error } = postList;
 
-  const postCreate = useSelector((state) => state.postCreate);
-  const { success: successCreate } = postCreate;
-
   // Get username thats logged in from State
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
-  // Delete POST function
-  const deleteHandler = (id) => {
-    if (window.confirm("Are you sure you want to delete?")) {
-      console.log("Deleted");
-    }
-  };
+  // Delete post
+  const postDelete = useSelector((state) => state.postDelete);
+  const {
+    loading: loadingDelete,
+    error: errorDelete,
+    success: successDelete,
+  } = postDelete;
 
-  console.log(posts);
+  const postCreate = useSelector((state) => state.postCreate);
+  const { success: successCreate } = postCreate;
+
+  const postUpdate = useSelector((state) => state.postUpdate);
+  const { success: successUpdate } = postUpdate;
 
   const history = useHistory();
-
   // Create useEffect when component is rendered
   useEffect(() => {
     // Pass async function
@@ -39,7 +41,24 @@ function MyPosts() {
     if (!userInfo) {
       history.push("/");
     }
-  }, [dispatch]);
+  }, [
+    dispatch,
+    history,
+    userInfo,
+    successDelete,
+    successUpdate,
+    successCreate,
+  ]);
+
+  // Delete POST function
+  const deleteHandler = (id) => {
+    if (window.confirm("Are you sure you want to delete?")) {
+      dispatch(deletePostAction(id));
+      console.log("Deleted");
+    }
+  };
+  // Test data
+  console.log(posts);
 
   return (
     <div className="text-center">
@@ -53,7 +72,7 @@ function MyPosts() {
         {posts?.map((post) => {
           return (
             <Accordion key={post._id}>
-              <Card className="mx-2 my-3">
+              <Card className="mx-2 my-3 ">
                 <Card.Header className="d-flex">
                   <span
                     style={{
