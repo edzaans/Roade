@@ -34,3 +34,7 @@ export const Heading = styled.p`
   color: #f5d10d;
   font-weight: bold;
 `;
+
+export const test = styled.link`
+  background: yellow;
+`;

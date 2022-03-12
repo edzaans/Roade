@@ -1,4 +1,4 @@
-const posts = [
+const testPost = [
   {
     _id: "1",
     title: "Full time driver",
@@ -28,4 +28,4 @@ const posts = [
   },
 ];
 
-module.exports = posts;
+module.exports = testPost;

@@ -14,7 +14,7 @@ const userRoutes = require("./routes/userRoutes");
 const postRoutes = require("./routes/postRoutes");
 
 // Import test data
-const posts = require("../frontend/src/data/posts");
+const testPosts = require("../frontend/src/data/testPosts");
 // Import MIDDLEWARE from folder
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const router = require("./routes/postRoutes");
@@ -40,6 +40,11 @@ app.use(express.json());
 // Test API point
 app.get("/", (req, res) => {
   res.send("Api is running");
+});
+
+app.use("/testPosts", (req, res) => {
+  res.send("Testing is live");
+  console.log("Youre in");
 });
 
 app.use("/api/users", userRoutes);

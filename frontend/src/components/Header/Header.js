@@ -18,7 +18,7 @@ import { logout } from "../../actions/userActions";
 // Import ROADE logout
 const logo = require("../../assets/images/Roade_logo2.png");
 
-function Header() {
+function Header({ setSearch }) {
   const history = useHistory();
 
   const dispatch = useDispatch();
@@ -54,6 +54,7 @@ function Header() {
                   placeholder="Search"
                   className="me-2"
                   aria-label="Search"
+                  onChange={(e) => setSearch(e.target.value)}
                 />
               </Form>
             </Nav>
@@ -66,6 +67,11 @@ function Header() {
               <Nav.Link>
                 <Link to="/rsa" style={{ textDecoration: "none" }}>
                   RSA
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/testPosts" style={{ textDecoration: "none" }}>
+                  Test Posts
                 </Link>
               </Nav.Link>
               <Nav.Link>

@@ -1,0 +1,168 @@
+/*start chatbot*/
+.react-chatbot-kit-chat-container {
+  margin: 0 auto;
+  margin-top: 5%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(252, 248, 248);
+  border-radius: 5px;
+}
+.react-chatbot-kit-chat-inner-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(73, 72, 72, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 3px;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+.react-chatbot-kit-chat-header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #efefef;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #514f4f;
+  padding: 12.5px;
+  font-weight: bold;
+}
+.react-chatbot-kit-chat-message-container {
+  padding: 0 17.5px 10px 17.5px;
+  overflow: scroll;
+  height: 424px;
+}
+.react-chatbot-kit-chat-input-container {
+  position: relative;
+  bottom: 0;
+  top: 1;
+  width: 90%;
+  height: fit-content;
+  display: flex;
+}
+.react-chatbot-kit-chat-bot-message-container {
+  background-color: rgb(255, 255, 255);
+}
+.react-chatbot-kit-chat-bot-avatar {
+  background-color: rgb(255, 255, 255);
+}
+.react-chatbot-kit-chat-bot-avatar-container {
+  background-color: rgb(255, 255, 255);
+  padding-top: 15px;
+}
+.react-chatbot-kit-chat-bot-avatar-icon {
+  background-color: rgb(255, 255, 255);
+}
+.react-chatbot-kit-chat-bot-avatar-letter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: rgb(196, 195, 195);
+  color: rgb(255, 255, 255);
+  margin-right: 15px;
+}
+.react-chatbot-kit-chat-bot-message {
+  background-color: rgb(24, 137, 212);
+}
+.learning-option-container {
+  background-color: rgb(42, 40, 156);
+}
+.learning-option-button {
+  background-color: rgb(6, 4, 80);
+}
+.react-chatbot-kit-user-avatar-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: rgb(255, 255, 255);
+  color: rgb(29, 65, 223);
+  margin-right: 15px;
+  padding-top: 15px;
+}
+.link-list-item {
+  list-style: none;
+}
+.react-chatbot-kit-chat-btn-send {
+  width: 30px;
+  border: none;
+  background-color: black;
+}
+/*end chatbot*/
+.react-chatbot-kit-chat-input {
+  padding: 17px;
+  width: 90%;
+  border: none;
+  font-size: 0.85rem;
+  border-top: 1px solid #d8d8d8;
+  border-bottom-left-radius: 5px;
+}
+.react-chatbot-kit-chat-input-form {
+  width: 100%;
+  height: fit-content;
+  border: none;
+}
+.react-chatbot-kit-chat-input::placeholder {
+  color: #585858;
+}
+.react-chatbot-kit-chat-btn-send-send {
+  width: 100%;
+}
+.react-chatbot-kit-chat-btn-send-icon {
+  fill: rgb(224, 228, 17);
+  width: 100%;
+  margin: 0 auto;
+  height: fit-content;
+  margin-left: 5px;
+}
+.modal-content {
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 40px auto;
+  border-radius: 3;
+  z-index: 2;
+  text-align: left;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+.modal {
+  max-width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 150px;
+  left: 650px;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  overflow-y: auto;
+}
+.chatButton {
+  position: absolute;
+  right: 27px;
+  top: 30px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  margin: 25px;
+  float: right;
+  background-color: #fff;
+}
+
+.react-chatbot-kit-chat-header {
+  visibility: hidden;
+  position: relative;
+}
+.react-chatbot-kit-chat-header::after {
+  visibility: visible;
+  position: absolute;
+  content: "ROADE CHAT";
+}

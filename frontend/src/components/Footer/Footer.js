@@ -7,6 +7,7 @@ import { FaYoutubeSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 
 import { Button, Row, Col } from "react-bootstrap";
+import { ChatBot } from "../ChatBot/ChatBot";
 
 // Import stylesheet
 import("./Footer.css");
@@ -44,17 +45,26 @@ function Footer() {
                 </h6>
               </div>
 
-              <div class="col-md-2">
+              {/*   <div class="col-md-2">
                 <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" className="links">
+                  <a href="#!" className="links test">
                     FAQ
                   </a>
                 </h6>
-              </div>
+              </div> */}
             </div>
           </section>
+          <Row>
+            <Col md={4} className="text-center mx-auto my-4">
+              {/* Chatbot here!!! */}
+              <div className="chatBot">
+                <ChatBot></ChatBot>
+              </div>
+              {/* End of chatbot */}
+            </Col>
+          </Row>
 
-          <hr class="my-5" />
+          <hr className="my-3" />
 
           <Row className="text-center subscribe_container">
             <Col sm={12} md={6}>
