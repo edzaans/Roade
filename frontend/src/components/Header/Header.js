@@ -75,23 +75,48 @@ function Header({ setSearch }) {
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/posts" style={{ textDecoration: "none" }}>
-                  My Posts
-                </Link>
-              </Nav.Link>
-              <Nav.Link>
                 <Link to="/contact" style={{ textDecoration: "none" }}>
                   Contact Us
                 </Link>
               </Nav.Link>
-
-              <NavDropdown title="User" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">My Profile</NavDropdown.Item>
-                <NavDropdown.Item onClick={logoutHandler}>
-                  Log Out
-                </NavDropdown.Item>
-              </NavDropdown>
             </Nav>
+            {/* Check if user is logged in , display POSTS and User info */}
+            {userInfo ? (
+              <Nav>
+                <Nav.Link>
+                  <Link to="/posts" style={{ textDecoration: "none" }}>
+                    My Posts
+                  </Link>
+                </Nav.Link>
+
+                <NavDropdown
+                  title={userInfo?.name}
+                  id="navbarScrollingDropdown"
+                >
+                  <NavDropdown.Item href="/profile">
+                    My Profile
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={logoutHandler}>
+                    Log Out
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            ) : (
+              /* If user not logged in, display Login Button and redirect user to login / register screen */
+              <Nav>
+                {" "}
+                <Nav.Link>
+                  <Link to="/login" style={{ textDecoration: "none" }}>
+                    Log In
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link to="/register" style={{ textDecoration: "none" }}>
+                    Register
+                  </Link>
+                </Nav.Link>
+              </Nav>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>

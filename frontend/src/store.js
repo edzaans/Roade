@@ -10,7 +10,11 @@ import {
   postListReducer,
   postUpdateReducer,
 } from "./reducers/postsReducers";
-import { userLoginReducer, userRegisterReducer } from "./reducers/userReducers";
+import {
+  userLoginReducer,
+  userRegisterReducer,
+  userUpdateReducer,
+} from "./reducers/userReducers";
 
 const reducer = combineReducers({
   // This containes all reducers
@@ -20,6 +24,7 @@ const reducer = combineReducers({
   postCreate: postCreateReducer,
   postUpdate: postUpdateReducer,
   postDelete: postDeleteReducer,
+  userUpdate: userUpdateReducer,
 });
 
 const userInfoFromLocalStorage = localStorage.getItem("userInfo")

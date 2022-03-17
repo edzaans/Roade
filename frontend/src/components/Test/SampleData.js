@@ -60,7 +60,7 @@ export function SampleData() {
               <Accordion.Body>
                 {element.content}
                 <hr></hr>
-                <p className="mt-3">Contact details - {element.phone}</p>
+                <p>Contact details - {element.phone}</p>
               </Accordion.Body>
             </Accordion.Item>
           );
@@ -69,3 +69,37 @@ export function SampleData() {
     </div>
   );
 }
+
+/* import React, { useState, useEffect } from "react";
+
+export function SampleData() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response = await fetch("http://jsonblob.com/952388292155031552");
+      const postsData = await response.json();
+      setPosts(postsData);
+    };
+    fetchPosts();
+  }, []);
+
+  const usePosts = posts.map((post) => {
+    return (
+      <div>
+        <h3>{post.id}</h3>
+        <h4>{post.title}</h4>
+        <p>{post.body}</p>
+      </div>
+    );
+  });
+
+  return (
+    <>
+      <h1>Fetch API With UseState and UseEffect</h1>
+      <h2>Dummy API - http://jsonblob.com/952388292155031552</h2>
+      <div className="container">{posts && usePosts}</div>
+    </>
+  );
+}
+ */

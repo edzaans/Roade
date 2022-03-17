@@ -65,4 +65,35 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { registerUser, authUser };
+// Controller for user profile
+const updateUserProfile = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+  if (user) {
+    user.name = req.body.name || user.name;
+    user.email = req.body.email || user.email;
+    user.number = req.body.number || user.number;
+    user.picture = req.body.picture || user.picture;
+
+    // Check if password is coming back from database
+    if (req.body.password) {
+      user.password = req.body.password;
+    }
+
+    const updatedUser = await user.save();
+
+    res.json({
+      _id: updatedUser._id,
+      name: updatedUser.name,
+      number: updatedUser.number,
+      email: updatedUser.email,
+      picture: updatedUser.picture,
+      token: generateToken(updatedUser._id),
+    });
+  } else {
+    // Throw error if user is not found
+    res.status(404);
+    throw new Error("User not found !!!");
+  }
+});
+
+module.exports = { registerUser, authUser, updateUserProfile };

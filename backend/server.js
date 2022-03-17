@@ -47,11 +47,11 @@ app.use("/testPosts", (req, res) => {
   console.log("Youre in");
 });
 
-app.use("/api/users", userRoutes);
+app.use("api/testPosts", postRoutes);
 
+app.use("/api/users", userRoutes);
 // Route to GET all posts!!!!!!!!
 app.use("/api/posts", postRoutes);
-// Route to CREATE posts!!!!
 
 app.use(notFound);
 app.use(errorHandler);

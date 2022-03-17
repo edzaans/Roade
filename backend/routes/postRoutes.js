@@ -5,10 +5,12 @@ const {
   getPostById,
   updatePost,
   deletePost,
+  allPosts,
 } = require("../controllers/postController");
 const { protect } = require("../middlewares/authMiddleware");
 const router = express.Router();
 
+router.route("/testPosts").get(allPosts);
 // GET request all routes
 router.route("/").get(protect, getPosts);
 // Create POST (takes Logged in users ID+adds to New Post)

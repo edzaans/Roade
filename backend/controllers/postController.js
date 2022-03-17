@@ -7,6 +7,12 @@ const getPosts = asyncHandler(async (req, res) => {
   res.json(posts);
 });
 
+// Display all posts that were posted
+const allPosts = asyncHandler(async (req, res) => {
+  const displayAllPosts = await Post.find();
+  res.json(displayAllPosts);
+});
+
 // Create a new post
 const createPost = asyncHandler(async (req, res) => {
   const { title, content, category } = req.body;
@@ -75,4 +81,11 @@ const deletePost = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { getPosts, createPost, getPostById, updatePost, deletePost };
+module.exports = {
+  getPosts,
+  createPost,
+  getPostById,
+  updatePost,
+  deletePost,
+  allPosts,
+};
