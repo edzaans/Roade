@@ -4,6 +4,7 @@ import Slide from "../../components/Slide/Slide";
 import Cards from "../../components/Content/Cards/Cards";
 import About from "../../components/Content/About/About";
 import WorkWithUs from "../../components/Content/WorkWithUs/WorkWithUs";
+
 import { useEffect } from "react";
 
 const test1 = require("../../assets/images/bg-showcase-1.jpg");

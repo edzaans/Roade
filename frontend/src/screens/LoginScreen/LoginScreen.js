@@ -41,7 +41,7 @@ const LoginScreen = ({ history }) => {
 
   return (
     <MainScreen title="LOGIN">
-      <div class="container h-100 mt-5">
+      <div class="container  mt-5">
         {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
         {loading && <Loading />}
         <div class="d-flex justify-content-center h-100">

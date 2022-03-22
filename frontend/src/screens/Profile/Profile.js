@@ -131,7 +131,19 @@ const Profile = () => {
                 <ErrorMessage variant="danger">{picMessage}</ErrorMessage>
               )}
               <Form.Group controlId="pic">
-                <Form.Label>Change Profile Picture</Form.Label>
+                <Form.Label style={{ marginRight: "10px" }}>
+                  Change Profile Picture
+                </Form.Label>
+                <Form.Label
+                  style={{
+                    marginBottom: "5px",
+                    color: "red",
+                  }}
+                >
+                  <p>
+                    <small>File types accepted : PNG/JPG</small>
+                  </p>
+                </Form.Label>
                 <Form.Control
                   type="file"
                   onChange={(e) => postDetails(e.target.files[0])}
@@ -139,7 +151,7 @@ const Profile = () => {
                   custom
                 />
               </Form.Group>
-              <Button type="submit" varient="primary">
+              <Button type="submit" varient="primary" className="mt-2">
                 Update
               </Button>
             </Form>
