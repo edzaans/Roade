@@ -4,6 +4,7 @@ import Slide from "../../components/Slide/Slide";
 import Cards from "../../components/Content/Cards/Cards";
 import About from "../../components/Content/About/About";
 import WorkWithUs from "../../components/Content/WorkWithUs/WorkWithUs";
+import Gallery_Carousel from "../../components/Content/Gallery/Gallery_Carousel";
 
 import { useEffect } from "react";
 
@@ -28,6 +29,7 @@ function LandingPage({ history }) {
       <Cards></Cards>
       <About></About>
       <WorkWithUs></WorkWithUs>
+      <Gallery_Carousel></Gallery_Carousel>
 
       {/*   <div className="my-5 mr-auto text-center">
         <a href="/login" className="">
