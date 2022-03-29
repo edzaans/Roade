@@ -65,15 +65,20 @@ function Header({ setSearch }) {
               navbarScroll
             >
               <Nav.Link>
+                <Link to="/job_list" style={{ textDecoration: "none" }}>
+                  Jobs
+                </Link>
+              </Nav.Link>
+              <Nav.Link>
                 <Link to="/rsa" style={{ textDecoration: "none" }}>
                   RSA
                 </Link>
               </Nav.Link>
-              <Nav.Link>
+              {/*        <Nav.Link>
                 <Link to="/testPosts" style={{ textDecoration: "none" }}>
                   Test Posts
                 </Link>
-              </Nav.Link>
+              </Nav.Link> */}
               <Nav.Link>
                 <Link to="/contact" style={{ textDecoration: "none" }}>
                   Contact Us

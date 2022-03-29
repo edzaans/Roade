@@ -14,6 +14,7 @@ import SinglePost from "./screens/SinglePost/SinglePost";
 import { useState } from "react";
 import { SampleData } from "./components/Test/SampleData";
 import Profile from "./screens/Profile/Profile";
+import Connection from "./components/Test/Connection";
 
 function App() {
   // Search bar functionality
@@ -35,7 +36,8 @@ function App() {
         <Route path="/rsa" component={RSAinfo} exact></Route>
         <Route path="/createpost" component={CreatePost} exact></Route>
         <Route path="/posts/:id" component={SinglePost}></Route>
-        <Route path="/testPosts" component={SampleData} exact></Route>
+        {/*  <Route path="/testPosts" component={SampleData} exact></Route> */}
+        <Route path="/job_list" component={Connection} exact></Route>
         <Route path="/profile" component={Profile} exact></Route>
       </main>
 

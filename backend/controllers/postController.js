@@ -9,8 +9,9 @@ const getPosts = asyncHandler(async (req, res) => {
 
 // Display all posts that were posted
 const allPosts = asyncHandler(async (req, res) => {
-  const displayAllPosts = await Post.find();
+  const displayAllPosts = await Post.find({ category: "Development" });
   res.json(displayAllPosts);
+  console.log("Posts retreiving from DB");
 });
 
 // Create a new post
