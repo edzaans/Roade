@@ -6,8 +6,8 @@ function WorkWithUs() {
   return (
     <div className="container">
       <div className="mt-5 mr-auto text-center">
-        <h1>How it works</h1>
-        <p>
+        <h1 className="mb-3">How it works</h1>
+        <p className="px-3 py-3">
           If you are interested in finding highly skilled employee or a short
           term contractor, please register with us or log in!!! We dont have set
           pricing plan, insted we charge only for clicked ads, if there is no
@@ -23,16 +23,17 @@ function WorkWithUs() {
 
       {/* Pricing table */}
       <div class="container-fluid">
-        <div class="container p-5">
+        <div class="container px-5">
           <div class="row">
-            <div className="col-lg-6 col-md-12 mb-4">
-              <div className="card h-100 shadow-lg shadow-md">
+            <div className="col-lg-6 col-md-6 mb-4">
+              <div className="card h-100 ">
                 <div className="card-body">
                   <div class="text-center p-3">
-                    <span class="h2">Register</span>
+                    <span class="h2">Sign up</span>
                   </div>
                   <p class="card-text text-center">
                     Please register to start creating your job postings
+                    <p>{/* DO NOT delete this,used for spacing */}</p>
                   </p>
                 </div>
                 <ul className="list-group list-group-flush test">
@@ -83,8 +84,8 @@ function WorkWithUs() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 col-md-12 mb-4">
-              <div className="card h-100 shadow-lg">
+            <div class="col-lg-6 col-md-6 mb-4">
+              <div className="card h-100 ">
                 <div class="card-body">
                   <div class="text-center p-3">
                     <span class="h2">Log in</span>
@@ -139,128 +140,6 @@ function WorkWithUs() {
                   <a href="/login" className="">
                     <Button className="btn btn-info mx-2">Log In</Button>
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Rotating cards*/}
-      <div class="container p-5">
-        <div class="row">
-          <div className="col-lg-6 col-md-6  cardMargin">
-            <div class="h-100 flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <span class="price">Reg</span>
-
-                  <h2 class="card-title">Standard</h2>
-                  <small>Small Business</small>
-                </div>
-                <div class="flip-card-back">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Cras justo odio
-                    </li>
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Dapibus ac facilisis in
-                    </li>
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Vestibulum at eros
-                    </li>
-                  </ul>
-                  <button class="my-5 btn btn-outline-success btn-lg">
-                    Select
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Card 2 */}
-          <div className="col-lg-6 col-md-6 cardMargin">
-            <div class="h-100 flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <span class="price">Log</span>
-
-                  <h2 class="card-title">Standard</h2>
-                  <small>Small Business</small>
-                </div>
-                <div class="flip-card-back">
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Cras justo odio
-                    </li>
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Dapibus ac facilisis in
-                    </li>
-                    <li class="list-group-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-check"
-                        viewBox="0 0 16 16"
-                      >
-                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
-                      </svg>{" "}
-                      Vestibulum at eros
-                    </li>
-                  </ul>
-                  <button class="my-5 btn btn-outline-success btn-lg">
-                    Select
-                  </button>
                 </div>
               </div>
             </div>

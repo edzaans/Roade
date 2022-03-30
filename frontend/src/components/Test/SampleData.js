@@ -1,6 +1,5 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import "./Test.css";
 
 export function SampleData() {
   const testPost = [

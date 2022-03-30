@@ -8,6 +8,9 @@ import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { testPosts } from "../../data/testPosts";
 
+// import Styles
+import "./Posts.css";
+
 import { listPosts, deletePostAction } from "../../actions/postsActions";
 
 function MyPosts({ search }) {
@@ -97,15 +100,14 @@ function MyPosts({ search }) {
                       </span>
                       <div>
                         <Button
-                          variant="info"
-                          className="mx-2"
+                          className="mx-1 success-btn"
                           href={`/posts/${post._id}`}
                         >
                           Edit
                         </Button>
                         <Button
-                          variant="primary"
-                          className="mx-2"
+                          variant="danger"
+                          className="mx-1"
                           onClick={() => deleteHandler(post._id)}
                         >
                           Delete
@@ -113,12 +115,16 @@ function MyPosts({ search }) {
                       </div>
                     </Card.Header>
                     <Card.Body>
-                      <h4>
+                      <div className="d-flex align-left">
                         {" "}
-                        <Badge pill bg="success">
-                          Category : {post.category}
-                        </Badge>{" "}
-                      </h4>
+                        <h4>
+                          {" "}
+                          <Badge pill bg="success">
+                            Category : {post.category}
+                          </Badge>{" "}
+                        </h4>
+                      </div>
+
                       <blockquote className="blockquote mb-0">
                         <p style={{ fontSize: "1rem" }}>{post.content}</p>
                         <footer className="blockquote-footer">

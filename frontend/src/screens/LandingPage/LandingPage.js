@@ -27,7 +27,7 @@ function LandingPage({ history }) {
     <div>
       <Slide></Slide>
       <Cards></Cards>
-      <About></About>
+      {/* <About></About> */}
       <WorkWithUs></WorkWithUs>
       <Gallery_Carousel></Gallery_Carousel>
 

@@ -49,7 +49,6 @@ function SinglePost({ match, history }) {
 
   return (
     <MainScreen title="Edit Post">
-      <div>Testing</div>
       <Card>
         <Card.Header>Edit your Post</Card.Header>
         <Card.Body>
@@ -78,17 +77,20 @@ function SinglePost({ match, history }) {
                 onChange={(e) => setContent(e.target.value)}
               />
             </Form.Group>
-            {content && (
+
+            {/* Code for POST preview, uncomment if needd!!!!! */}
+            {/*     {content && (
               <Card>
                 <Card.Header>Post Preview</Card.Header>
                 <Card.Body>
                   <ReactMarkdown>{content}</ReactMarkdown>
                 </Card.Body>
               </Card>
-            )}
+            )} */}
             <Form.Group controlId="content">
               <Form.Label>Category</Form.Label>
               <Form.Control
+                className="mb-5"
                 type="content"
                 placeholder="Enter the Category"
                 value={category}
@@ -97,14 +99,14 @@ function SinglePost({ match, history }) {
             </Form.Group>
             {Loading && <Loading size={50} />}
             <Button variant="primary" type="submit">
-              Update Note
+              Update Post
             </Button>
             <Button
               className="mx-2"
               variant="danger"
               /* onClick={() => deleteHandler(match.params.id)} */
             >
-              Delete Note
+              Delete Post
             </Button>
           </Form>
         </Card.Body>

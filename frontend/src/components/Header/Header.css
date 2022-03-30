@@ -1,0 +1,16 @@
+.navbar-header {
+  background-color: #423a34;
+}
+
+.nav-links {
+  color: rgb(250, 226, 8);
+  text-transform: uppercase;
+}
+.nav-links:hover {
+  color: green;
+}
+
+.login-icon {
+  width: 20px;
+  height: 20px;
+}

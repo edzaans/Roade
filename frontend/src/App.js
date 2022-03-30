@@ -15,6 +15,7 @@ import { useState } from "react";
 import { SampleData } from "./components/Test/SampleData";
 import Profile from "./screens/Profile/Profile";
 import Connection from "./components/Test/Connection";
+import UsFooter from "../src/components/Content/About-Us/UsFooter";
 
 function App() {
   // Search bar functionality
@@ -39,6 +40,7 @@ function App() {
         {/*  <Route path="/testPosts" component={SampleData} exact></Route> */}
         <Route path="/job_list" component={Connection} exact></Route>
         <Route path="/profile" component={Profile} exact></Route>
+        <Route path="/about-us" component={UsFooter} exact></Route>
       </main>
 
       <Footer />

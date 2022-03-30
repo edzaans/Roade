@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 
+.item-test {
+  box-shadow: 1px 5px 58px -4px rgba(68, 67, 67, 0.54);
+}
 .dark {
   background: #110f16;
 }
@@ -21,7 +24,7 @@ a:hover {
 .postcard {
   flex-wrap: wrap;
   display: flex;
-  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  box-shadow: 1px 5px 58px -4px rgba(0, 0, 0, 0.54);
   border-radius: 10px;
   margin: 0 0 2rem 0;
   overflow: hidden;

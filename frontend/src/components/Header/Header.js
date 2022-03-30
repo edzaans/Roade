@@ -1,5 +1,7 @@
 import React from "react";
 
+// import Headers styles
+import "./Header.css";
 // Import all Bootstrap classes
 import {
   Navbar,
@@ -9,6 +11,11 @@ import {
   FormControl,
   Container,
 } from "react-bootstrap";
+
+// Import Icons
+import { RiLoginBoxLine } from "react-icons/ri";
+import { CgProfile } from "react-icons/cg";
+import { MdOutlineLogin } from "react-icons/md";
 
 // Import dependancies
 import { useDispatch, useSelector } from "react-redux";
@@ -33,8 +40,8 @@ function Header({ setSearch }) {
   };
   return (
     <div>
-      <Navbar bg="info" expand="md">
-        <Container fluid>
+      <Navbar className="navbar-header" expand="md">
+        <Container fluid className="navbar-header">
           {/* Brand with logo */}
           <Navbar.Brand href="/">
             <img
@@ -65,12 +72,12 @@ function Header({ setSearch }) {
               navbarScroll
             >
               <Nav.Link>
-                <Link to="/job_list" style={{ textDecoration: "none" }}>
+                <Link to="/job_list" className="nav-links">
                   Jobs
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link to="/rsa" style={{ textDecoration: "none" }}>
+                <Link to="/rsa" className="nav-links">
                   RSA
                 </Link>
               </Nav.Link>
@@ -80,7 +87,7 @@ function Header({ setSearch }) {
                 </Link>
               </Nav.Link> */}
               <Nav.Link>
-                <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Link to="/contact" className="nav-links">
                   Contact Us
                 </Link>
               </Nav.Link>
@@ -89,7 +96,7 @@ function Header({ setSearch }) {
             {userInfo ? (
               <Nav>
                 <Nav.Link>
-                  <Link to="/posts" style={{ textDecoration: "none" }}>
+                  <Link to="/posts" className="nav-links">
                     My Posts
                   </Link>
                 </Nav.Link>
@@ -111,13 +118,19 @@ function Header({ setSearch }) {
               <Nav>
                 {" "}
                 <Nav.Link>
-                  <Link to="/login" style={{ textDecoration: "none" }}>
-                    Log In
+                  <Link to="/login" className="nav-links">
+                    <span>
+                      {/* <CgProfile className="login-icon mx-1" /> */}
+                      Log In
+                    </span>
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/register" style={{ textDecoration: "none" }}>
-                    Register
+                  <Link to="/register" className="nav-links">
+                    <span>
+                      {/* <MdOutlineLogin className="login-icon mx-1" /> */}
+                      Register
+                    </span>
                   </Link>
                 </Nav.Link>
               </Nav>
