@@ -9,8 +9,10 @@ import ErrorMessage from "../../components/ErrorMessage";
 import ReactMarkdown from "react-markdown";
 
 function SinglePost({ match, history }) {
+  const [company, setCompany] = useState();
   const [title, setTitle] = useState();
   const [content, setContent] = useState();
+  const [contact, setContact] = useState();
   const [category, setCategory] = useState();
   const [date, setDate] = useState("");
 
@@ -23,8 +25,10 @@ function SinglePost({ match, history }) {
     const fetching = async () => {
       const { data } = await axios.get(`/api/posts/${match.params.id}`);
       console.log("data received");
+      setCompany(data.company);
       setTitle(data.title);
       setContent(data.content);
+      setContact(data.contact);
       setCategory(data.category);
       setDate(data.updatedAt);
     };
@@ -33,15 +37,26 @@ function SinglePost({ match, history }) {
   }, [match.params.id, date]);
 
   const resetHandler = () => {
+    setCompany("");
     setTitle("");
     setCategory("");
+    setContact("");
     setContent("");
   };
 
   const updateHandler = (e) => {
     e.preventDefault();
-    dispatch(updatePostAction(match.params.id, title, content, category));
-    if (!title || !content || !category) return;
+    dispatch(
+      updatePostAction(
+        match.params.id,
+        company,
+        title,
+        content,
+        contact,
+        category
+      )
+    );
+    if (!company || !title || !content || !contact || !category) return;
 
     resetHandler();
     history.push("/posts");
@@ -53,28 +68,30 @@ function SinglePost({ match, history }) {
         <Card.Header>Edit your Post</Card.Header>
         <Card.Body>
           <Form onSubmit={updateHandler}>
-            {/*      {loadingDelete && <Loading />}
+            {/* {loadingDelete && <Loading />}
             {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
             {errorDelete && (
               <ErrorMessage variant="danger">{errorDelete}</ErrorMessage>
             )} */}
+
+            {/*  */}
+            <Form.Group controlId="company">
+              <Form.Label>Company name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter company name"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+              />
+            </Form.Group>
+
             <Form.Group controlId="title">
               <Form.Label>Title</Form.Label>
               <Form.Control
-                type="title"
+                type="text"
                 placeholder="Enter the title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group controlId="content">
-              <Form.Label>Content</Form.Label>
-              <Form.Control
-                as="textarea"
-                placeholder="Enter the content"
-                rows={4}
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
               />
             </Form.Group>
 
@@ -87,7 +104,30 @@ function SinglePost({ match, history }) {
                 </Card.Body>
               </Card>
             )} */}
+
+            {/*  */}
+            <Form.Group controlId="contact">
+              <Form.Label>Company email</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter company email"
+                value={contact}
+                onChange={(e) => setContact(e.target.value)}
+              />
+            </Form.Group>
+
             <Form.Group controlId="content">
+              <Form.Label>Content</Form.Label>
+              <Form.Control
+                as="textarea"
+                placeholder="Enter the content"
+                rows={4}
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+              />
+            </Form.Group>
+
+            <Form.Group controlId="category">
               <Form.Label>Category</Form.Label>
               <Form.Control
                 className="mb-5"

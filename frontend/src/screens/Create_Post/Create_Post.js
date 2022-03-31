@@ -8,8 +8,10 @@ import ErrorMessage from "../../components/ErrorMessage";
 import ReactMarkdown from "react-markdown";
 
 function CreatePost({ history }) {
+  const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [contact, setContact] = useState("");
   const [category, setCategory] = useState("");
 
   const dispatch = useDispatch();
@@ -27,8 +29,8 @@ function CreatePost({ history }) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createPostAction(title, content, category));
-    if (!title || !content || !category) return;
+    dispatch(createPostAction(company, title, content, contact, category));
+    if (!company || !title || !content || !contact || !category) return;
 
     resetHandler();
     history.push("/posts");
@@ -43,8 +45,19 @@ function CreatePost({ history }) {
         <Card.Body>
           <Form onSubmit={submitHandler}>
             {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+            {/* Sets company NAME */}
             <Form.Group controlId="title">
-              <Form.Label>Title</Form.Label>
+              <Form.Label>Company name</Form.Label>
+              <Form.Control
+                type="text"
+                value={company}
+                placeholder="Enter company name"
+                onChange={(e) => setCompany(e.target.value)}
+              />
+            </Form.Group>
+            {/*  */}
+            <Form.Group controlId="title">
+              <Form.Label>Job title</Form.Label>
               <Form.Control
                 type="text"
                 value={title}
@@ -53,24 +66,17 @@ function CreatePost({ history }) {
               />
             </Form.Group>
 
-            <Form.Group controlId="content">
-              <Form.Label>Content</Form.Label>
+            {/* Sets company CONTACT */}
+            <Form.Group controlId="title">
+              <Form.Label>Company contact email </Form.Label>
               <Form.Control
-                as="textarea"
-                value={content}
-                placeholder="Enter the content"
-                rows={4}
-                onChange={(e) => setContent(e.target.value)}
+                type="email"
+                value={contact}
+                placeholder="Enter contact email"
+                onChange={(e) => setContact(e.target.value)}
               />
             </Form.Group>
-            {content && (
-              <Card>
-                <Card.Header>Post Preview</Card.Header>
-                <Card.Body>
-                  <ReactMarkdown>{content}</ReactMarkdown>
-                </Card.Body>
-              </Card>
-            )}
+            {/*  */}
 
             <Form.Group controlId="content">
               <Form.Label>Category</Form.Label>
@@ -80,6 +86,25 @@ function CreatePost({ history }) {
                 placeholder="Enter the Category"
                 onChange={(e) => setCategory(e.target.value)}
               />
+
+              <Form.Group controlId="content">
+                <Form.Label>Job description</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  value={content}
+                  placeholder="Enter the content"
+                  rows={4}
+                  onChange={(e) => setContent(e.target.value)}
+                />
+              </Form.Group>
+              {content && (
+                <Card>
+                  <Card.Header>Post Preview</Card.Header>
+                  <Card.Body>
+                    <ReactMarkdown>{content}</ReactMarkdown>
+                  </Card.Body>
+                </Card>
+              )}
             </Form.Group>
             {loading && <Loading size={50} />}
             <Button type="submit" variant="primary">

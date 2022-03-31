@@ -44,7 +44,8 @@ export const listPosts = () => async (dispatch, getState) => {
 
 // Creates a new post for logged in user
 export const createPostAction =
-  (title, content, category) => async (dispatch, getState) => {
+  (company, title, content, contact, category) =>
+  async (dispatch, getState) => {
     try {
       dispatch({
         type: POSTS_CREATE_REQUEST,
@@ -63,7 +64,7 @@ export const createPostAction =
 
       const { data } = await axios.post(
         `/api/posts/create`,
-        { title, content, category },
+        { company, title, content, contact, category },
         config
       );
 
@@ -85,7 +86,8 @@ export const createPostAction =
 
 // Edit posts
 export const updatePostAction =
-  (id, title, content, category) => async (dispatch, getState) => {
+  (id, company, title, content, contact, category) =>
+  async (dispatch, getState) => {
     try {
       dispatch({
         type: POSTS_UPDATE_REQUEST,
@@ -104,7 +106,7 @@ export const updatePostAction =
 
       const { data } = await axios.put(
         `/api/posts/${id}`,
-        { title, content, category },
+        { company, title, content, contact, category },
         config
       );
 

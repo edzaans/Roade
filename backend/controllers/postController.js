@@ -16,14 +16,21 @@ const allPosts = asyncHandler(async (req, res) => {
 
 // Create a new post
 const createPost = asyncHandler(async (req, res) => {
-  const { title, content, category } = req.body;
+  const { company, title, content, contact, category } = req.body;
 
-  if (!title || !content || !category) {
+  if (!company || !title || !content || !contact || !category) {
     res.status(400);
     throw new Error("Please Fill all the fields");
     return;
   } else {
-    const post = new Post({ user: req.user._id, title, content, category });
+    const post = new Post({
+      user: req.user._id,
+      company,
+      title,
+      content,
+      contact,
+      category,
+    });
 
     const createdPost = await post.save();
 
@@ -44,7 +51,7 @@ const getPostById = asyncHandler(async (req, res) => {
 
 // Update post!!!!!!!!
 const updatePost = asyncHandler(async (req, res) => {
-  const { title, content, category } = req.body;
+  const { company, title, content, contact, category } = req.body;
   const post = await Post.findById(req.params.id);
 
   if (post.user.toString() !== req.user._id.toString()) {
@@ -52,8 +59,10 @@ const updatePost = asyncHandler(async (req, res) => {
     throw new Error("You cant edit this post...");
   }
   if (post) {
+    post.company = company;
     post.title = title;
     post.content = content;
+    post.contact = contact;
     post.category = category;
     const updatedPost = await post.save();
     res.json("Updated post : " + updatedPost);

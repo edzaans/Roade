@@ -3,12 +3,20 @@ const mongoose = require("mongoose");
 // Create a POST schema to be created
 const postSchema = mongoose.Schema(
   {
+    company: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,
     },
 
     content: {
+      type: String,
+      required: true,
+    },
+    contact: {
       type: String,
       required: true,
     },
