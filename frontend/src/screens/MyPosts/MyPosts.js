@@ -6,7 +6,7 @@ import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import { Accordion, Badge, Button, Card } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
-import { testPosts } from "../../data/testPosts";
+//import { testPosts } from "../../data/testPosts";
 
 // import Styles
 import "./Posts.css";

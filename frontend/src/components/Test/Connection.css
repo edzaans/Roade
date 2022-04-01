@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+.backdrop {
+  background-color: #424242;
+}
+
+.test-flex {
+  align-items: center;
+  justify-content: center;
+}
 
 .item-test {
   box-shadow: 1px 5px 58px -4px rgba(68, 67, 67, 0.54);
@@ -94,7 +102,7 @@ a:hover {
 }
 .postcard .postcard__tagbox .tag__item {
   display: inline-block;
-  background: rgba(83, 83, 83, 0.4);
+  background: rgba(24, 177, 75, 0.705);
   border-radius: 3px;
   padding: 2.5px 10px;
   margin: 0 5px 5px 0;

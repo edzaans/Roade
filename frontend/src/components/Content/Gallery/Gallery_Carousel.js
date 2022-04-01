@@ -2,178 +2,101 @@ import React from "react";
 import Gallery from "react-grid-gallery";
 
 // Import all assets needed for gallery
-const truck = require("../../../assets/images/truck.jpg");
-const Favorited = require("../../../assets/images/Favorited.jpg");
+const truck1 = require("../../../assets/images/tr1.jpg");
+const truck2 = require("../../../assets/images/tr25.jpg");
+const truck3 = require("../../../assets/images/tr11.jpg");
+const truck4 = require("../../../assets/images/tr1.jpg");
+const truck5 = require("../../../assets/images/tr35.jpg");
+const truck6 = require("../../../assets/images/tr36.jpg");
+const truck7 = require("../../../assets/images/tr40.jpg");
+const truck8 = require("../../../assets/images/tr26.jpg");
+const truck9 = require("../../../assets/images/tr1.jpg");
+const truck10 = require("../../../assets/images/tr27.jpg");
+const truck11 = require("../../../assets/images/tr1.jpg");
+//const truck12 = require("../../../assets/images/tr1.jpg");
 
 // For Sarah ......... read below and populate gallery .....its fixed now!!!
 // Import variables as a src / thumbnail without { } braces, its not an OBJECT!!!!!!
 const IMAGES = [
   {
-    src: Favorited,
-    thumbnail: Favorited,
-    thumbnailWidth: 320,
+    src: truck1,
+    thumbnail: truck1,
+    thumbnailWidth: 340,
     thumbnailHeight: 212,
   },
 
   {
-    src: truck,
-    thumbnail: truck,
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    tags: [
-      { value: "Ocean", title: "Ocean" },
-
-      { value: "People", title: "People" },
-    ],
-
-    caption: "Boats (Jeshu John - designerspics.com)",
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck2,
+    thumbnail: truck2,
+    thumbnailWidth: 340,
     thumbnailHeight: 212,
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck3,
+    thumbnail: truck3,
+    thumbnailWidth: 340,
+    thumbnailHeight: 212,
+  },
+  {
+    src: truck4,
+    thumbnail: truck4,
+    thumbnailWidth: 340,
     thumbnailHeight: 174,
-
-    caption: "After Rain (Jeshu John - designerspics.com)",
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-
-    thumbnailWidth: 320,
-
-    thumbnailHeight: 212,
-
-    tags: [
-      { value: "Ocean", title: "Ocean" },
-
-      { value: "People", title: "People" },
-    ],
-
-    caption: "Boats (Jeshu John - designerspics.com)",
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck5,
+    thumbnail: truck5,
+    thumbnailWidth: 450,
     thumbnailHeight: 212,
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck6,
+    thumbnail: truck6,
+    thumbnailWidth: 450,
+    thumbnailHeight: 212,
+  },
+  {
+    src: truck7,
+    thumbnail: truck7,
+    thumbnailWidth: 450,
     thumbnailHeight: 174,
-
-    caption: "After Rain (Jeshu John - designerspics.com)",
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-
-    thumbnailWidth: 320,
-
-    thumbnailHeight: 212,
-
-    tags: [
-      { value: "Ocean", title: "Ocean" },
-
-      { value: "People", title: "People" },
-    ],
-
-    caption: "Boats (Jeshu John - designerspics.com)",
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck8,
+    thumbnail: truck8,
+    thumbnailWidth: 340,
     thumbnailHeight: 212,
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck9,
+    thumbnail: truck9,
+    thumbnailWidth: 340,
+    thumbnailHeight: 212,
+  },
+  {
+    src: truck10,
+    thumbnail: truck10,
+    thumbnailWidth: 340,
     thumbnailHeight: 174,
-
-    caption: "After Rain (Jeshu John - designerspics.com)",
   },
-
   {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-
-    thumbnail:
-      "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-
-    thumbnailWidth: 320,
-
+    src: truck11,
+    thumbnail: truck11,
+    thumbnailWidth: 340,
     thumbnailHeight: 212,
-
-    tags: [
-      { value: "Ocean", title: "Ocean" },
-
-      { value: "People", title: "People" },
-    ],
-
-    caption: "Boats (Jeshu John - designerspics.com)",
   },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-
+  /*   {
+    src: truck12,
+    thumbnail: truck12,
     thumbnailWidth: 720,
-
     thumbnailHeight: 212,
-  },
+  },  */
 ];
 
 function Gallery_Carousel() {
   return (
     <div>
-      <h1 className="text-center">Sarah's carousel here</h1>
+      <h1 className="text-center my-5">Our recent clients</h1>
       <Gallery images={IMAGES} />
     </div>
   );

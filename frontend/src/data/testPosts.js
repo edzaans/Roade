@@ -1,3 +1,4 @@
+// Data only to be used to test API
 const testPost = [
   {
     _id: "1",

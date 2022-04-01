@@ -10,9 +10,18 @@ import "./Connection.css";
 
 // Declare Date to format
 const date = new Date();
-
+// Set state for data coming back
 function Connection() {
   const [jobs, setJobs] = useState([]);
+
+  // Create Mail constant to send email to details pulled from Database
+  const Mailto = ({ email, subject = "", body = "", children }) => {
+    let params = subject || body ? "?" : "";
+    if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    if (body) params += `${subject ? "&" : ""}body=${encodeURIComponent(body)}`;
+
+    return <a href={`mailto:${email}${params}`}>{children}</a>;
+  };
 
   // Retreives data when page is loaded
   useEffect(() => {
@@ -30,7 +39,7 @@ function Connection() {
           {jobs.map((job, key) => {
             return (
               <Accordion.Item eventKey={key} className="my-2 item-test">
-                <Accordion.Header>{job.title}</Accordion.Header>
+                <Accordion.Header>{job.company}</Accordion.Header>
                 <Accordion.Body>
                   <article class="postcard light blue">
                     <a class="postcard__img_link" href="#">
@@ -72,8 +81,10 @@ function Connection() {
                       </div>
                       <ul class="postcard__tagbox">
                         <li class="tag__item">
-                          <i class="fas fa-tag mr-2"></i>
-                          Email
+                          {/* Mailing here */}
+                          <Mailto email={job.contact} subject={job.title}>
+                            Apply here
+                          </Mailto>
                         </li>
                       </ul>
                     </div>
