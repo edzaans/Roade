@@ -6,13 +6,13 @@ import "./Slide.css";
 const truck = require("../../assets/images/truck.jpg");
 const van = require("../../assets/images/van.jpg");
 const warehouse = require("../../assets/images/warehouse.jpg");
-const header = require("../../assets/images/Roade_header.png");
+const header = require("../../assets/images/Roade_header3.png");
 
 function Slide() {
   return (
     <div>
       <Row>
-        <Image src={header} alt="Roade header" className="img-fluid"></Image>
+        <Image src={header} alt="Roade header" className=" image-test"></Image>
       </Row>
 
       {/*    <Carousel fade fluid>

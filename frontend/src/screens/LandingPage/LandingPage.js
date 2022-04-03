@@ -4,6 +4,7 @@ import Slide from "../../components/Slide/Slide";
 import Cards from "../../components/Content/Cards/Cards";
 import About from "../../components/Content/About/About";
 import WorkWithUs from "../../components/Content/WorkWithUs/WorkWithUs";
+import Panel from "../../components/Content/Panel/Panel";
 import Gallery_Carousel from "../../components/Content/Gallery/Gallery_Carousel";
 
 import { useEffect } from "react";
@@ -26,8 +27,8 @@ function LandingPage({ history }) {
   return (
     <div>
       <Slide></Slide>
+      {/* <Panel></Panel> */}
       <Cards></Cards>
-      {/* <About></About> */}
       <WorkWithUs></WorkWithUs>
       <Gallery_Carousel></Gallery_Carousel>
 

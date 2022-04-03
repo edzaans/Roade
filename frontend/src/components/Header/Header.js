@@ -1,5 +1,8 @@
 import React from "react";
 
+// Import icons
+import { BiUserCircle } from "react-icons/bi";
+
 // import Headers styles
 import "./Header.css";
 // Import all Bootstrap classes
@@ -102,8 +105,9 @@ function Header({ setSearch }) {
                 </Nav.Link>
 
                 <NavDropdown
-                  title={userInfo?.name}
+                  title={userInfo?.name} /* {<BiUserCircle />} */
                   id="navbarScrollingDropdown"
+                  className="user_info"
                 >
                   <NavDropdown.Item href="/profile">
                     My Profile

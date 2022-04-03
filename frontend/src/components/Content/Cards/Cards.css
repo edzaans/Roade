@@ -1,3 +1,12 @@
+.card-text {
+  background: rgb(179, 238, 238);
+  background: linear-gradient(
+    180deg,
+    rgba(179, 238, 238, 0.7323232323232323) 19%,
+    rgba(185, 188, 189, 0.7373737373737373) 98%
+  );
+  border-radius: 10px;
+}
 .quote_container {
   background-color: rgb(208, 209, 203) !important;
   width: auto;

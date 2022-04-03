@@ -1,3 +1,6 @@
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+
 // Import Icon name to be used ( use as a component in code )
 import { Form, FormControl } from "react-bootstrap";
 import { AiFillFacebook } from "react-icons/ai";
@@ -13,6 +16,26 @@ import { ChatBot } from "../ChatBot/ChatBot";
 import("./Footer.css");
 
 function Footer() {
+  const form = useRef();
+  // Form for email Handling
+  const sendEmail = () => {
+    alert("Email sent");
+    emailjs
+      .sendForm(
+        "service_iszz07n",
+        "template_jzt8af3",
+        form.current,
+        "user_oKRxSUTydfndsFHxJ4yXk"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <div className="text-center">
       <hr></hr>
@@ -89,19 +112,31 @@ function Footer() {
             <Col sm={12} md={6}>
               <section className="">
                 <span>
-                  <h3 className="text-white mb-5">Subscribe to newsletter</h3>
+                  <h3 className="text-white mb-4">Subscribe to newsletter</h3>
                 </span>
-                <Form className="d-flex justify-content-center my-3">
-                  <FormControl
-                    type="email"
-                    placeholder="Your e-mail"
-                    className="me-2 subscribe"
-                    aria-label="subscribe"
-                  />
-                  <Button type="submit" className="">
-                    Subscribe
-                  </Button>
-                </Form>
+                <div>
+                  {" "}
+                  <form ref={form} onSubmit={sendEmail}>
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-md-6 col-sm-6 ">
+                        <div>
+                          <label for="email" class="">
+                            Your email
+                          </label>
+                          <input
+                            type="email"
+                            name="user_email"
+                            class="form-control"
+                            required
+                          />{" "}
+                        </div>
+                      </div>
+                      <div className="col-md-2  mt-4">
+                        <Button type="submit">Subscribe</Button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
               </section>
             </Col>
           </Row>

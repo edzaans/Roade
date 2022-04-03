@@ -1,12 +1,15 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
-import { Accordion } from "react-bootstrap";
+import { Accordion, Badge } from "react-bootstrap";
 
 // Import Main Screen
 import MainScreen from "../MainScreen";
 
 // Import styles
 import "./Connection.css";
+
+// Import assets
+const header = require("../../assets/Images_Custom/img4.png");
 
 // Declare Date to format
 const date = new Date();
@@ -39,13 +42,25 @@ function Connection() {
           {jobs.map((job, key) => {
             return (
               <Accordion.Item eventKey={key} className="my-2 item-test">
-                <Accordion.Header>{job.company}</Accordion.Header>
+                <Accordion.Header>
+                  <div className="px-2 card_heading">
+                    <h3>
+                      {job.company} / {job.title}
+                    </h3>{" "}
+                    Created on : <span>{date.toDateString(job.createdAt)}</span>
+                  </div>
+
+                  {/*    <div className="mx-2">
+                    {" "}
+                    <Badge bg="success">{job.category}</Badge>
+                  </div> */}
+                </Accordion.Header>
                 <Accordion.Body>
                   <article class="postcard light blue">
                     <a class="postcard__img_link" href="#">
                       <img
                         class="postcard__img"
-                        src="https://picsum.photos/1000/1000"
+                        src={header}
                         alt="Image Title"
                       />
                     </a>
@@ -66,6 +81,10 @@ function Connection() {
                           {job.title}
                         </span>
                       </h1>
+                      <div className="mx-2">
+                        {" "}
+                        <Badge bg="success">{job.category}</Badge>
+                      </div>
                       <div class="postcard__subtitle small">
                         <time datetime={date.getDate(job.createdAt)}>
                           <i class="fas fa-calendar-alt mr-2"></i>
@@ -79,12 +98,16 @@ function Connection() {
                       <div class="postcard__preview-txt">
                         <p>{job.content}</p>
                       </div>
-                      <ul class="postcard__tagbox">
+                      <ul class="postcard__tagbox text-center">
                         <li class="tag__item">
                           {/* Mailing here */}
                           <Mailto email={job.contact} subject={job.title}>
                             Apply here
                           </Mailto>
+                        </li>
+                        <li class="tag__item ">
+                          {/* Mailing here */}
+                          {job.contact}
                         </li>
                       </ul>
                     </div>

@@ -2,6 +2,7 @@ import "./UsFooter.css";
 
 // Image assets
 const us1 = require("../../../assets/images/usFooter1.png");
+const us2 = require("../../../assets/images/usFooter2.png");
 
 function UsFooter() {
   return (
@@ -15,15 +16,15 @@ function UsFooter() {
                 Roadie is the only job search engine dedicated to Transport and
                 Logistics industry. Roadie is an innovative digital media
                 software product developed by fourth year Computing and Digital
-                media students at GMIT as part of the Final year Project.â€¯â€¯
-                Roade team consists of ambitious and committed people who derive
-                joy and satisfaction from everyday work. Service is addressed to
+                media students at GMIT as part of the Final year Project. Roade
+                team consists of ambitious and committed people who derive joy
+                and satisfaction from everyday work. Service is addressed to
                 professional, skilled drivers and transport and logistic
                 companies within the industry, people who need help finding
                 employment or have work available. Service aims at people
                 actively looking for work opportunities as well as companies
                 that are either straggling to fill in available vacancies or
-                need additional, temporary drivers.â€¯{" "}
+                need additional, temporary drivers.{" "}
               </p>
               <ul>
                 <li> Quality</li>
@@ -31,9 +32,6 @@ function UsFooter() {
                 <li> User Friendly</li>
                 <li> Easy To Use</li>
               </ul>
-              <button type="button" class="btn btn-sm btn-success">
-                Getting Started
-              </button>
             </div>
             <div class="col-md-6">
               <img
@@ -48,10 +46,13 @@ function UsFooter() {
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <img className="hand-img" src={us1} />
+              <img
+                className="hand-img rounded mx-auto d-block w-75"
+                src={us2}
+              />
             </div>
             <div class="col-md-6">
-              <h1>How Does This Apps Works</h1>
+              <h1>How Does This App Works</h1>
               <b>Create Account</b>
               <p>
                 Creating account is quick and easy. Just follow our tutorial.

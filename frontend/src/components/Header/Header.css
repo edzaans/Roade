@@ -14,3 +14,10 @@
   width: 20px;
   height: 20px;
 }
+
+.user_info {
+  color: white;
+  background-color: rgb(250, 226, 8);
+  border-radius: 10px;
+  max-width: 80px;
+}

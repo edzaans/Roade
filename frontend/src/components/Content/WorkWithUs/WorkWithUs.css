@@ -1,10 +1,11 @@
 .card {
-  background-color: rgb(208, 209, 203) !important;
+  background: #b3eeee;
+
   box-shadow: 5px 5px 20px -4px rgba(0, 0, 0, 0.54);
 }
 
 .test {
-  background-color: rgb(208, 209, 203) !important;
+  background: #b3eeee;
 }
 
 .cardMargin {
@@ -29,4 +30,8 @@
 .btn-info {
   background-color: rgb(26, 184, 60) !important;
   width: 33%;
+}
+
+.video {
+  max-width: 100%;
 }

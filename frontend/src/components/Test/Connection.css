@@ -2,7 +2,9 @@
 .backdrop {
   background-color: #424242;
 }
-
+.card_heading {
+  min-width: 10%;
+}
 .test-flex {
   align-items: center;
   justify-content: center;
