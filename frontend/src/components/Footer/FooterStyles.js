@@ -31,7 +31,7 @@ export const FooterLink = styled.a`
 
 export const Heading = styled.p`
   font-size: 1.5rem;
-  color: #f5d10d;
+  color: #d6930e;
   font-weight: bold;
 `;
 

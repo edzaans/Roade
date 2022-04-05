@@ -112,7 +112,7 @@ function Footer() {
             <Col sm={12} md={6}>
               <section className="">
                 <span>
-                  <h3 className="text-white mb-4">Subscribe to newsletter</h3>
+                  <h3>Subscribe to newsletter</h3>
                 </span>
                 <div>
                   {" "}

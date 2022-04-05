@@ -3,10 +3,10 @@ import { Player } from "video-react";
 import "./WorkWithUs.css";
 import video from "../../../assets/Images_Custom/Intro/RoadeIntroWebsite.mp4";
 
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 
 const signup = require("../../../assets/images/usFooter1.png");
-const login = require("../../../assets/images/LogIn.jpg");
+const login = require("../../../assets/Images_Custom/login.png");
 const intro = require("../../../assets/Images_Custom/Intro/RoadeIntroWebsite.mp4");
 
 function WorkWithUs() {
@@ -27,23 +27,8 @@ function WorkWithUs() {
           <Button className="btn btn-info mx-2">Sign Up</Button>
         </a> */}
       </div>
-      <div className="container ">
-        <div className="row ">
-          {/* Hides video on smaller screens */}
-          <div className="col-md-6 d-none d-sm-block">
-            <video
-              /* className="video" */
-              src={video}
-              width="680"
-              height="500"
-              controls
-              autoplay="true"
-            ></video>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
+      {/*     <div class="row">
         <div className="col-lg-6 col-md-6 mb-4">
           <div className="card h-100 ">
             <div className="card-body">
@@ -106,7 +91,7 @@ function WorkWithUs() {
             <div className="card-body">
               <div class="text-center">
                 <span class="h2">Log in</span>
-                <img src={signup} alt="" className="img-fluid" />
+                <img src={login} alt="" className="img-fluid" />
               </div>
             </div>
             <ul className="list-group list-group-flush">
@@ -157,7 +142,63 @@ function WorkWithUs() {
             </div>
           </div>
         </div>
+      </div> */}
+      {/* Duplicate section for login cards */}
+
+      <div class="row text-center">
+        <div class="col-sm-6 mb-5">
+          <div class="bg-custom rounded shadow-sm shadow-sm shadow-md shadow-lg py-5 px-4">
+            <h5 class="mb-3">Sign Up</h5>
+            <img
+              src={signup}
+              alt=""
+              width="200"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+            />
+
+            <p>
+              Sign up using your company, personal and contact details to start
+              Roade experience
+            </p>
+
+            <Button className="btn btn-success" href="register">
+              Sign Up
+            </Button>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-5">
+          <div class="bg-custom rounded shadow-sm shadow-md shadow-lg py-5 px-4">
+            <h5 class="mb-3">Log In</h5>
+            <img
+              src={login}
+              alt=""
+              width="200"
+              class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+            />
+            <p>
+              Log in to system to view or edit your profile. Create and edit job
+              postings to find employees
+            </p>
+
+            <Button className="btn btn-success" href="/login">
+              Log In
+            </Button>
+          </div>
+        </div>
       </div>
+      {/* Video here */}
+      <Row>
+        <Col md={12}>
+          {" "}
+          <video
+            /* className="video" */
+            src={video}
+            controls
+            autoplay="true"
+            muted
+          ></video>
+        </Col>
+      </Row>
     </div>
   );
 }

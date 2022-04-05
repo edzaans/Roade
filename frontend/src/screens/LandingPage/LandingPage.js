@@ -27,7 +27,7 @@ function LandingPage({ history }) {
   return (
     <div>
       <Slide></Slide>
-      {/* <Panel></Panel> */}
+      <Panel></Panel>
       <Cards></Cards>
       <WorkWithUs></WorkWithUs>
       <Gallery_Carousel></Gallery_Carousel>

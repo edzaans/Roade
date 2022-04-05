@@ -7,6 +7,7 @@ import {
   Offcanvas,
   Image,
   Modal,
+  ProgressBar,
 } from "react-bootstrap";
 
 import { useRef, useState } from "react";
@@ -45,7 +46,7 @@ function Cards() {
   return (
     <div>
       <div>
-        <Container fluid className="quote-container">
+        <Container className="quote-container">
           <div className="row d-flex justify-content-center">
             <div className="col-md-4 text-center">
               <h1 className="mb-5">What we offer</h1>
@@ -53,10 +54,10 @@ function Cards() {
           </div>
 
           {/* Responsive content */}
-          <div className="row my-3">
-            <div className="col-md-6 order-md-2 order-sm-2 card-text">
+          <div className="row my-3 ">
+            <div className="col-md-6 order-md-2 order-sm-2  card-text shadow-lg">
               {" "}
-              <div className="py-3">
+              <div className="py-3 px-3">
                 <h4>Technology that delivers</h4>
 
                 <p>
@@ -97,12 +98,12 @@ function Cards() {
                 </Modal>
               </div>
             </div>
-            <div className="col-md-6 order-md-1 order-sm-1">
-              <img src={technology} alt="" className="img-fluid" />
+            <div className="col-md-6 order-md-1 order-sm-1  d-flex ">
+              <img src={technology} alt="" className="img-fluid img-style " />
             </div>
           </div>
           <div className="row my-3">
-            <div className="col-md-6 order-md-1 card-text">
+            <div className="col-md-6 order-md-2 order-sm-2 card-text">
               {" "}
               <div className="py-3">
                 <h4>Redesigned</h4>
@@ -141,12 +142,12 @@ function Cards() {
                 </Modal>
               </div>
             </div>
-            <div className="col-md-6 order-md-2">
-              <img src={redesigned} alt="" className="img-fluid" />
+            <div className="col-md-6 order-md-2 order-sm-1 d-flex ">
+              <img src={redesigned} alt="" className="img-fluid img-style" />
             </div>
           </div>
           <div className="row my-3 ">
-            <div className="col-md-6 order-md-2 card-text">
+            <div className="col-md-6 order-md-2 order-sm-2 card-text">
               {" "}
               <div className="py-3">
                 <h4>Favorited</h4>
@@ -186,8 +187,8 @@ function Cards() {
                 </Modal>
               </div>
             </div>
-            <div className="col-md-6 order-md-1">
-              <img src={favorited} alt="" className="img-fluid" />
+            <div className="col-md-6 order-md-1 order-sm-1  d-flex ">
+              <img src={favorited} alt="" className="img-fluid img-style" />
             </div>
           </div>
         </Container>

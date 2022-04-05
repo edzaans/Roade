@@ -5,9 +5,7 @@
 /* Services Section
   --------------------------------*/
 #services {
-  background: #fff;
-  background-size: cover;
-  padding: 80px 0 60px 0;
+  padding: 0px 0 60px 0;
 }
 #services .box {
   padding: 50px 20px;
@@ -32,7 +30,7 @@
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #11cdee;
+  background: #ec8907;
 }
 #services .icon a {
   display: inline-block;
@@ -44,7 +42,7 @@
 }
 #services .box:hover .icon {
   background: #fff;
-  border: 2px solid #2dc997;
+  border: 2px solid #ec8907;
 }
 #services .box:hover .icon i {
   color: #dfee0d;
