@@ -36,17 +36,17 @@ const config = {
           {
             text: "Video",
 
-            url: "http://localhost:3000/tutorial",
+            url: "https://roade.herokuapp.com/tutorial",
             id: 1,
           },
           {
             text: "Instructions",
-            url: "http://localhost:3000/tutorialtext",
+            url: "https://roade.herokuapp.com/tutorialtext",
             id: 2,
           },
           {
             text: "FAQ",
-            url: "http://localhost:3000/faq",
+            url: "https://roade.herokuapp.com/faq",
             id: 3,
           },
         ],
@@ -61,17 +61,18 @@ const config = {
         options: [
           {
             text: "Video",
-            url: "http://localhost:3000/tutorial",
+
+            url: "https://roade.herokuapp.com/tutorial",
             id: 1,
           },
           {
             text: "Instructions",
-            url: "http://localhost:3000/tutorialtext",
+            url: "https://roade.herokuapp.com/tutorialtext",
             id: 2,
           },
           {
             text: "FAQ",
-            url: "http://localhost:3000/faq",
+            url: "https://roade.herokuapp.com/faq",
             id: 3,
           },
         ],
