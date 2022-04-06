@@ -90,17 +90,16 @@
   list-style: none;
 }
 .react-chatbot-kit-chat-btn-send {
-  width: 30px;
+  width: 25px;
   border: none;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 /*end chatbot*/
 .react-chatbot-kit-chat-input {
-  padding: 17px;
+  padding: 15px;
   width: 90%;
   border: none;
   font-size: 0.85rem;
-  border-top: 1px solid #d8d8d8;
   border-bottom-left-radius: 5px;
 }
 .react-chatbot-kit-chat-input-form {

@@ -7,16 +7,19 @@ import LinkList from "./components/LinkList/LinkList";
 const config = {
   botName: "Roade",
   initialMessages: [
-    createChatBotMessage("Hi, I'm here to help. What do you want to know?", {
-      widget: "learningOptions",
-    }),
+    createChatBotMessage(
+      "Welcome to Roade! Select option below or type HELP for more...",
+      {
+        widget: "learningOptions",
+      }
+    ),
   ],
   customStyles: {
     botMessageBox: {
       backgroundColor: "#f7c40c",
     },
     chatButton: {
-      backgroundColor: "#ffffff",
+      backgroundColor: "#ffffff00",
     },
   },
   widgets: [
@@ -26,58 +29,54 @@ const config = {
     },
     //employee widget
     {
-      widgetName: "employeeRegistrationList",
-      widgetFunc: (props) => <LinkList {...props} />,
-      props: {
-        options: [
-          {
-            text: "Instruction on How to Register as an Employee",
-           
-            url:
-              "https://pixabay.com/photos/registration-log-in-keyboard-hand-3938434/",
-           id: 1,
-          },
-          {
-            text: "Test title",
-            url:
-              "https://pixabay.com/photos/board-school-university-to-learn-2450236/",
-            id: 2,
-          },
-          {
-            text: "Test Title2",
-            url: "https://pixabay.com/photos/question-question-mark-opinion-poll-2736480/",
-            id: 3,
-          },
-        ],
-      },
-    },//end employee widget
-
-    //employer widget
-    {
       widgetName: "employerRegistrationList",
       widgetFunc: (props) => <LinkList {...props} />,
       props: {
         options: [
           {
-            text: "Instruction on How to Register as an Employer",
-            url:
-              "https://pixabay.com/photos/registration-log-in-keyboard-hand-3938434/",
+            text: "Video",
+
+            url: "http://localhost:3000/tutorial",
             id: 1,
           },
           {
-            text: "Test title",
-            url:
-              "https://pixabay.com/photos/board-school-university-to-learn-2450236/",
+            text: "Instructions",
+            url: "http://localhost:3000/tutorialtext",
             id: 2,
           },
           {
-            text: "Test Title2",
-            url: "https://pixabay.com/photos/question-question-mark-opinion-poll-2736480/",
+            text: "FAQ",
+            url: "http://localhost:3000/faq",
             id: 3,
           },
         ],
       },
-    },//end employer widget
+    }, //end employee widget
+
+    //employer widget
+    {
+      widgetName: "employeeRegistrationList",
+      widgetFunc: (props) => <LinkList {...props} />,
+      props: {
+        options: [
+          {
+            text: "Video",
+            url: "http://localhost:3000/tutorial",
+            id: 1,
+          },
+          {
+            text: "Instructions",
+            url: "http://localhost:3000/tutorialtext",
+            id: 2,
+          },
+          {
+            text: "FAQ",
+            url: "http://localhost:3000/faq",
+            id: 3,
+          },
+        ],
+      },
+    }, //end employer widget
   ],
 };
 

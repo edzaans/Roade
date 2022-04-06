@@ -29,11 +29,11 @@ function Panel() {
               <div class="box shadow">
                 <div class="icon shadow"></div>
                 <h4 class="title">
-                  <a>Dolor Sitema</a>
+                  <a>Reliable services</a>
                 </h4>
                 <p class="description">
-                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat tarad limino ata
+                  Innovative solutions, new technologies essentical for building
+                  modern applications.
                 </p>
               </div>
             </div>
@@ -41,11 +41,11 @@ function Panel() {
               <div class="box shadow">
                 <div class="icon shadow"></div>
                 <h4 class="title">
-                  <a>Sed ut perspiciatis</a>
+                  <a>Great support</a>
                 </h4>
                 <p class="description">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur
+                  Team Roade consider the needs of users as well as the current
+                  state of the labour market in the sector.
                 </p>
               </div>
             </div>

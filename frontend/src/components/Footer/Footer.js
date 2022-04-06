@@ -62,7 +62,11 @@ function Footer() {
 
               <div class="col-md-2">
                 <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" className="links">
+                  <a
+                    href="https://www.rsa.ie/"
+                    target="_blank"
+                    className="links"
+                  >
                     Links
                   </a>
                 </h6>
@@ -96,7 +100,9 @@ function Footer() {
                   <h3 className="">Connect with Us</h3>
                 </span>
                 <span>
-                  <AiFillFacebook className="icon icon_fb" />
+                  <a href="https://www.facebook.com/Roade-100692772440719">
+                    <AiFillFacebook className="icon icon_fb" />
+                  </a>
                 </span>
                 <span>
                   <AiFillInstagram className="icon icon_insta" />

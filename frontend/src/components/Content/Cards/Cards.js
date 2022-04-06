@@ -1,14 +1,4 @@
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Overlay,
-  Offcanvas,
-  Image,
-  Modal,
-  ProgressBar,
-} from "react-bootstrap";
+import { Container, Button, Modal } from "react-bootstrap";
 
 import { useRef, useState } from "react";
 
@@ -16,12 +6,10 @@ import { useRef, useState } from "react";
 import "./Cards.css";
 
 // Import assets
-const van = require("../../../assets/images/van.jpg");
+
 const technology = require("../../../assets/Images_Custom/img2.jpg");
 const redesigned = require("../../../assets/Images_Custom/img1.png");
 const favorited = require("../../../assets/Images_Custom/img12.jpg");
-//const technology = require("../../../assets/images/Technology.jpg");
-//const redesigned = require("../../../assets/images/Redesigned.jpg");
 
 function Cards() {
   // Create Modal states for switching between them...important!!!!!!

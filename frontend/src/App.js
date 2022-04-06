@@ -16,6 +16,10 @@ import { SampleData } from "./components/Test/SampleData";
 import Profile from "./screens/Profile/Profile";
 import Connection from "./components/Test/Connection";
 import UsFooter from "../src/components/Content/About-Us/UsFooter";
+// Chat bot components
+import FAQ from "../src/components/ChatBot/FAQ";
+import Tutorial from "../src/components/ChatBot/Tutorial";
+import TutorialText from "../src/components/ChatBot/TutorialText";
 
 function App() {
   // Search bar functionality
@@ -37,10 +41,17 @@ function App() {
         <Route path="/rsa" component={RSAinfo} exact></Route>
         <Route path="/createpost" component={CreatePost} exact></Route>
         <Route path="/posts/:id" component={SinglePost}></Route>
-        {/*  <Route path="/testPosts" component={SampleData} exact></Route> */}
-        <Route path="/job_list" component={Connection} exact></Route>
+        {/* Route to jobs/ send props for search functionality */}
+        <Route
+          path="/job_list"
+          component={() => <Connection search={search} />}
+          exact
+        ></Route>
         <Route path="/profile" component={Profile} exact></Route>
         <Route path="/about-us" component={UsFooter} exact></Route>
+        <Route path="/faq" component={FAQ} exact></Route>
+        <Route path="/tutorial" component={Tutorial} exact></Route>
+        <Route path="/tutorialtext" component={TutorialText} exact></Route>
       </main>
 
       <Footer />

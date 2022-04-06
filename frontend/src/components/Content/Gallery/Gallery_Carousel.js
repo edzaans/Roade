@@ -1,9 +1,6 @@
 import React from "react";
-import Gallery from "react-grid-gallery";
 
 import "./Gallery.css";
-
-import { GrTechnology } from "react-icons/gr";
 
 // Import all assets needed for gallery
 const truck1 = require("../../../assets/images/tr1.jpg");
@@ -17,7 +14,6 @@ const truck8 = require("../../../assets/images/tr26.jpg");
 const truck9 = require("../../../assets/images/tr1.jpg");
 const truck10 = require("../../../assets/images/tr27.jpg");
 const truck11 = require("../../../assets/images/tr1.jpg");
-//const truck12 = require("../../../assets/images/tr1.jpg");
 
 // For Sarah ......... read below and populate gallery .....its fixed now!!!
 // Import variables as a src / thumbnail without { } braces, its not an OBJECT!!!!!!
@@ -89,12 +85,6 @@ const IMAGES = [
     thumbnailWidth: 340,
     thumbnailHeight: 212,
   },
-  /*   {
-    src: truck12,
-    thumbnail: truck12,
-    thumbnailWidth: 720,
-    thumbnailHeight: 212,
-  },  */
 ];
 
 function Gallery_Carousel() {
