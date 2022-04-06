@@ -83,6 +83,8 @@ app.use(errorHandler);
 // Declare PORT variable
 const PORT = process.env.port || 5000;
 // Run server on port 5000
-app.listen(PORT, () => {
+/* app.listen(PORT, () => {
   console.log(`NODE server running on port ${PORT}`);
-});
+}); */
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
