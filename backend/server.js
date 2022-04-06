@@ -19,6 +19,8 @@ const testPosts = require("../frontend/src/data/testPosts");
 // Import MIDDLEWARE from folder
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 const router = require("./routes/postRoutes");
+// Import NodeJS module
+const path = require("path");
 
 app.use(cors());
 // Set up HEADERS to be used by CORS
@@ -39,6 +41,11 @@ connectDB();
 // SUPER IMPORTANT!!!
 app.use(express.json());
 
+// Test API point
+/* app.get("/", (req, res) => {
+  res.send("Api is running");
+});
+ */
 // GET ALL POSTS!!!!!!!!
 app.get("/connection", async (req, res) => {
   PostModel.find({}, (err, result) => {
@@ -51,25 +58,24 @@ app.get("/connection", async (req, res) => {
   });
 });
 
-// Test API point
-app.get("/", (req, res) => {
-  res.send("Api is running");
-});
-
-/* app.use("/connection", (req, res) => {
-  console.log("Test");
-}); */
-
-/* app.use("/testPosts", (req, res) => {
-  res.send("Testing is live");
-  console.log("Youre in");
-}); */
-
-/* app.use("api/testPosts", postRoutes); */
-
 app.use("/api/users", userRoutes);
 // Route to GET all posts!!!!!!!!
 app.use("/api/posts", postRoutes);
+
+// Deployment
+__dirname = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "/frontend//build")));
+
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
+  );
+} else {
+  app.get("/", (req, res) => {
+    res.send("API is running..");
+  });
+}
 
 app.use(notFound);
 app.use(errorHandler);
