@@ -71,7 +71,17 @@
   background-color: rgb(42, 40, 156);
 }
 .learning-option-button {
-  background-color: rgb(6, 4, 80);
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  border: 0.5px solid rgb(239, 202, 17);
+  color: rgb(23, 23, 22);
+  text-align: center;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+.learning-option-button:hover {
+  background-color: #f0ca0e;
+  color: rgb(254, 254, 254);
 }
 .react-chatbot-kit-user-avatar-icon {
   width: 40px;

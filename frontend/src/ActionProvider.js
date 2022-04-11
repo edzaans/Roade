@@ -77,12 +77,12 @@ class ActionProvider {
   }
 
   // new method empty
-  empty() {
+  /*   empty() {
     const emptyMessage = this.createChatBotMessage(
       "Sorry, I don't understand. Try: HELP"
     );
     this.updateChatbotState(emptyMessage);
-  }
+  } */
   //employee option
   handleEmployeeRegistrationList = () => {
     const message = this.createChatBotMessage(

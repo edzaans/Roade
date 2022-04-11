@@ -64,9 +64,9 @@ class MessageParser {
     if (lowerCaseMessage.includes("bye")) {
       this.actionProvider.bye();
     }
-    if (lowerCaseMessage.includes(" ")) {
+    /*   if (lowerCaseMessage.includes(" ")) {
       this.actionProvider.empty();
-    }
+    } */
     if (lowerCaseMessage.includes("employee registration")) {
       this.actionProvider.handleemployeeRegistrationList();
     }
