@@ -17,7 +17,7 @@ function FAQ() {
         </div>
 
         <Accordion className="faq-accordion">
-          <Accordion.Body className="faq-accordion-body test">
+          <Accordion.Body className="faq-accordion-body">
             This is used for border in item #1 - do not remove!!!
           </Accordion.Body>
           <Accordion.Item className="faq-accordion-item" eventKey="0">
