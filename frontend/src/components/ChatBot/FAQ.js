@@ -16,28 +16,30 @@ function FAQ() {
           </div>
         </div>
 
-        <Accordion>
-          <Accordion.Body>
+        <Accordion className="faq-accordion">
+          <Accordion.Body className="faq-accordion-body test">
             This is used for border in item #1 - do not remove!!!
           </Accordion.Body>
-          <Accordion.Item eventKey="0">
-            <Accordion.Header>What is ROADE?</Accordion.Header>
-            <Accordion.Body>
+          <Accordion.Item className="faq-accordion-item" eventKey="0">
+            <Accordion.Header className="faq-accordion-header">
+              What is ROADE?
+            </Accordion.Header>
+            <Accordion.Body className="faq-accordion-body">
               Roade is a website for the transport and logistics industry
               allowing companies connect with skilled drivers and for drivers to
               find suitable job offers either short term or long term.
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="1">
+          <Accordion.Item className="faq-accordion-item" eventKey="1">
             <Accordion.Header>How do I register?</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="faq-accordion-body">
               To register you will need your company name (if you are employer),
               your personal details and your contact details.
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="2">
+          <Accordion.Item className="faq-accordion-item" eventKey="2">
             <Accordion.Header>How much does it cost?</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="faq-accordion-body">
               Registration is free. If you are employee looking for job, service
               is free. If you are employer looking for skilled drivers, Roade
               adapts PAY PER CLICK model based entirely on the clicks that are
@@ -47,9 +49,9 @@ function FAQ() {
               09933445566.
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="3">
+          <Accordion.Item className="faq-accordion-item" eventKey="3">
             <Accordion.Header>How do we collect your data?</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="faq-accordion-body">
               Roade collects data and process data when you:
               <ul>
                 <li>Register online</li>
@@ -61,9 +63,9 @@ function FAQ() {
               </ul>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="4">
+          <Accordion.Item className="faq-accordion-item" eventKey="4">
             <Accordion.Header>How will we use your data?</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="faq-accordion-body">
               Roade collects your data so that we can:
               <ul>
                 <li>Manage your account.</li>
@@ -74,9 +76,9 @@ function FAQ() {
               </ul>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="5">
+          <Accordion.Item className="faq-accordion-item" eventKey="5">
             <Accordion.Header>How do we store your data?</Accordion.Header>
-            <Accordion.Body>
+            <Accordion.Body className="faq-accordion-body">
               Roade securely stores your data for 24 months. Once this time
               period has expired, we will delete your data. Roade will not sell
               your data to third parties.
@@ -124,7 +126,7 @@ function FAQ() {
               </ul>
             </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Body>
+          <Accordion.Body className="faq-accordion-body">
             This is used for border in item #1 - do not remove!!!
           </Accordion.Body>
         </Accordion>
