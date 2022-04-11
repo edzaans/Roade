@@ -1,4 +1,25 @@
 /*start chatbot*/
+.modal {
+
+  max-width: 450px;
+
+  height: fit-content;
+
+  position: fixed;
+
+  top: 150px;
+
+  left: 650px;
+
+  bottom: 0;
+
+  right: 0;
+
+  overflow: auto;
+
+  overflow-y: auto;
+
+}
 .react-chatbot-kit-chat-container {
   margin: 0 auto;
   margin-top: 5%;
