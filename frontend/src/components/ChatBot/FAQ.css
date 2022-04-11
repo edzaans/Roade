@@ -1,43 +1,42 @@
-
-.faq-accordion {
+.faq-accordion{
   background: #fff none repeat scroll 0 0;
   border-radius: 13px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  margin: 10px;
+  margin:10px;
   padding: 30px;
 }
-.faq-accordion-item {
+.faq-accordion-item{
   background: #ffffff;
   border-radius: 10px;
   border: #ccc;
   margin-bottom: 10px;
 }
 
-.faq-accordion-body p {
+.faq-accordion-body p{
   border-left: dashed 1px rgb(245, 241, 15);
   padding-left: 15px;
 }
-
-.faq-accordion-header {
+.faq-accordion-header{
   background: #ffffff;
   border: #ccc;
   border-radius: 25px;
   padding: 5px;
 }
-accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed) {
   background-color: #f7c50e;
   border-radius: 25px;
   margin: 5px;
   padding: 20px;
   position: relative;
+
 }
-accordion-button:focus {
+.accordion-button:focus {
   z-index: 3;
-  border: none;
+  border:none;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(243, 241, 241, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(243, 241, 241, 0.25)
 }
-accordion-button {
+.accordion-button {
   border-radius: 25px;
   border: 1px solid #f7c50e;
 }
