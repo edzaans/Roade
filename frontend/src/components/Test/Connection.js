@@ -1,6 +1,6 @@
 import Axios from "axios";
 import { useState, useEffect } from "react";
-import { Accordion, Badge } from "react-bootstrap";
+import { Accordion, Badge, Row, Col } from "react-bootstrap";
 
 // Import Main Screen
 import MainScreen from "../MainScreen";
@@ -30,12 +30,13 @@ function Connection({ search }) {
   useEffect(() => {
     Axios.get("/connection").then((response) => {
       setJobs(response.data);
-      console.log(response);
+      // Log test data
+      /*  console.log(response); */
       console.log("Connection successful");
     });
   }, []);
   return (
-    <div className="text-center mx-5">
+    <div className="text-center">
       <MainScreen
         title={
           <div>
@@ -55,79 +56,86 @@ function Connection({ search }) {
             )
             .map((job, key) => {
               return (
-                <Accordion.Item eventKey={key} className="my-2 item-test">
-                  <Accordion.Header>
-                    <div className="px-2 card_heading">
-                      <h3>
-                        {job.company} / {job.title}
-                      </h3>{" "}
-                      Created on :{" "}
-                      <span>{date.toDateString(job.createdAt)}</span>
-                    </div>
+                <Row key={key}>
+                  <Col md={12}>
+                    <Accordion.Item eventKey={key} className="my-2 ">
+                      <Accordion.Header>
+                        <div className=" card_heading">
+                          <h3>
+                            {job.company} / {job.title}
+                          </h3>{" "}
+                          {/* Use DB date in header if needed */}
+                          {/*    Updated on :{" "}
+                      <span>{date.toDateString(job.createdAt)}</span> */}
+                        </div>
 
-                    {/*    <div className="mx-2">
+                        {/*    <div className="mx-2">
                     {" "}
                     <Badge bg="success">{job.category}</Badge>
                   </div> */}
-                  </Accordion.Header>
-                  <Accordion.Body>
-                    <article class="postcard light blue">
-                      <img
-                        class="postcard__img"
-                        src={header}
-                        alt="Image Title"
-                      />
+                      </Accordion.Header>
+                      <Accordion.Body>
+                        <article class="postcard light blue">
+                          <img
+                            class="postcard__img img-fluid"
+                            src={header}
+                            alt="Image Title"
+                          />
 
-                      <div class="postcard__text t-dark">
-                        <h1 class="postcard__title blue">
-                          <span
-                            style={{
-                              display: "flex",
-                              color: "black",
-                              textDecoration: "none",
-                              flex: 1,
-                              cursor: "pointer",
-                              alignSelf: "center",
-                              fontSize: "1.5 rem",
-                              justifyContent: "center",
-                            }}
-                          >
-                            {job.title}
-                          </span>
-                        </h1>
-                        <div className="mx-2">
-                          {" "}
-                          <Badge bg="success">{job.category}</Badge>
-                        </div>
-                        <div class="postcard__subtitle small">
-                          <time datetime={date.getDate(job.createdAt)}>
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <p>
-                              Created on :{" "}
-                              <span>{date.toDateString(job.createdAt)}</span>
-                            </p>
-                          </time>
-                        </div>
-                        <div class="postcard__bar"></div>
-                        <div class="postcard__preview-txt">
-                          <p>{job.content}</p>
-                        </div>
-                        <ul class="postcard__tagbox text-center">
-                          <li class="tag__item">
-                            {/* Mailing here */}
-                            <Mailto email={job.contact} subject={job.title}>
-                              Apply here
-                            </Mailto>
-                          </li>
-                          <li class="tag__item ">
-                            {/* Mailing here */}
-                            {job.contact}
-                          </li>
-                        </ul>
-                      </div>
-                    </article>
-                  </Accordion.Body>
-                </Accordion.Item>
+                          <div class="postcard__text t-dark">
+                            <h1 class="postcard__title blue">
+                              <span
+                                style={{
+                                  display: "flex",
+                                  color: "black",
+                                  textDecoration: "none",
+                                  flex: 1,
+                                  cursor: "pointer",
+                                  alignSelf: "center",
+                                  fontSize: "1.5 rem",
+                                  justifyContent: "center",
+                                }}
+                              >
+                                {job.title}
+                              </span>
+                            </h1>
+                            <div className="mx-2">
+                              {" "}
+                              <Badge bg="success">{job.category}</Badge>
+                            </div>
+                            <div class="postcard__subtitle small">
+                              <time datetime={date.getDate(job.createdAt)}>
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                <p>
+                                  Updated on :{" "}
+                                  <span>
+                                    {date.toDateString(job.createdAt)}
+                                  </span>
+                                </p>
+                              </time>
+                            </div>
+                            <div class="postcard__bar"></div>
+                            <div class="postcard__preview-txt">
+                              <p>{job.content}</p>
+                            </div>
+                            <ul class="postcard__tagbox text-center">
+                              <li class="tag__item">
+                                {/* Mailing here */}
+                                <Mailto email={job.contact} subject={job.title}>
+                                  Apply here
+                                </Mailto>
+                              </li>
+                              <li class="tag__item ">
+                                {/* Mailing here */}
+                                {job.contact}
+                              </li>
+                            </ul>
+                          </div>
+                        </article>
+                      </Accordion.Body>
+                    </Accordion.Item>
+                  </Col>
+                </Row>
               );
             })}
         </Accordion>

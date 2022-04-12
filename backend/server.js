@@ -54,7 +54,8 @@ app.get("/connection", async (req, res) => {
       console.log(err);
     }
     res.send(result);
-    console.log(result);
+    // Use log to test data coming from DB
+    /* console.log(result); */
   });
 });
 
@@ -85,7 +86,5 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(
   PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}..`
-  )
+  console.log(`Server running in ${process.env.NODE_ENV}, port ${PORT}...`)
 );

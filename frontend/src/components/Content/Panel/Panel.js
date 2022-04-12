@@ -20,8 +20,7 @@ function Panel() {
                 </h4>
                 <p class="description">
                   By using our services, each client can be convinced that the
-                  day-to-day operations are completely safe, and the processes
-                  planned by specialists.
+                  day-to-day operations are completely safe.
                 </p>
               </div>
             </div>

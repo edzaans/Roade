@@ -60,9 +60,10 @@ function Cards() {
                 </div>
 
                 <Modal show={modalState === "modal-one"}>
-                  <Modal.Body>This is Modal One</Modal.Body>
+                  <Modal.Body>
+                    <h3>Technology</h3>
+                  </Modal.Body>
                   <Modal.Footer>
-                    <p>This is footer in first modal</p>
                     <p>
                       {" "}
                       By using our services, each client can be convinced that
@@ -107,9 +108,10 @@ function Cards() {
                 </div>
 
                 <Modal show={modalState === "modal-two"}>
-                  <Modal.Body>This is Modal Two</Modal.Body>
+                  <Modal.Body>
+                    <h3>Redesigned</h3>
+                  </Modal.Body>
                   <Modal.Footer>
-                    <p>This is footer in second modal</p>
                     <p>
                       {" "}
                       We belive our innovative solution will be a solution that
@@ -152,9 +154,10 @@ function Cards() {
                 </div>
 
                 <Modal show={modalState === "modal-three"}>
-                  <Modal.Body>This is Modal Three</Modal.Body>
+                  <Modal.Body>
+                    <h3>Favorited</h3>
+                  </Modal.Body>
                   <Modal.Footer>
-                    <p>This is footer in third modal</p>
                     <p>
                       {" "}
                       We belive our innovative solution will be a solution that

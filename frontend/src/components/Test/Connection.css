@@ -1,3 +1,7 @@
+
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 .backdrop {
   background-color: #424242;
@@ -10,8 +14,11 @@
   justify-content: center;
 }
 
-.item-test {
-  box-shadow: 1px 5px 58px -4px rgba(68, 67, 67, 0.54);
+.accordion-item{
+  background: #ffffff;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
 }
 .dark {
   background: #110f16;
