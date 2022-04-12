@@ -17,31 +17,32 @@ All posted jobs are displayed in Jobs section where jobseereks can apply directl
 and generates information from user details.
 App has serch functionality where users can search posts by job title.
 
-
-## Getting Started
-
-Create empty directory where your app will be stored.
-Run "git init" in your directory.
-Pull Github repository.
-Open root directory using code editor ( We recommend VS Code )
-Open terminal ( Git bash, VS Code or any of your choice )
-
-
 ### Dependencies
 
 Make sure you have Node installed!
 Make sure you have NPM installed!
 
+## Getting Started
+
+Create empty directory where your app will be stored.
+Run "git init" in your directory.
+Pull Github repository here  "https://github.com/edzaans/Roade.git"
+Open App root directory using code editor ( We recommend VS Code )
+Open terminal ( Git bash, VS Code or any of your choice )
+
+
 ### Installing
 
  To install all modules / dependancies run 
-    1."npm install" in root folder
-    2."npm install" in /frontend folder
+    1."npm install" in root folder of App.
+    2."npm install" in /frontend folder of App.
 
 
 ### Executing program
 
 Run "npm run dev" in root folder of App.
+App will open in  your browser.
+If App doesnt open automatically, type "http://localhost:5000"
 
 ## Authors
 
@@ -56,4 +57,5 @@ ex. Katarzyna Krakowska [g00364903@gmit.ie]
 This App is free to use.
 
 ## Live app
+
 Live app is available on Heroku https://roade.herokuapp.com/
