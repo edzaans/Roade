@@ -1,4 +1,5 @@
 import axios from "axios";
+// Import functions from Constants file
 import {
   POSTS_CREATE_FAILURE,
   POSTS_CREATE_REQUEST,

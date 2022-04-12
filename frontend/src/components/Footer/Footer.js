@@ -1,4 +1,6 @@
+// Import useRef
 import React, { useRef } from "react";
+// Import EMAILJS dependancy
 import emailjs from "emailjs-com";
 
 // Import Icon name to be used ( use as a component in code )

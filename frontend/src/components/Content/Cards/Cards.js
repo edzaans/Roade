@@ -1,32 +1,36 @@
+// Import all necessary Bootstrap components
 import { Container, Button, Modal } from "react-bootstrap";
 
+// Import useState
 import { useRef, useState } from "react";
 
 // Import stylesheet
 import "./Cards.css";
 
 // Import assets
-
 const technology = require("../../../assets/Images_Custom/img2.jpg");
 const redesigned = require("../../../assets/Images_Custom/img1.png");
 const favorited = require("../../../assets/Images_Custom/img12.jpg");
 
+// Main function
 function Cards() {
   // Create Modal states for switching between them...important!!!!!!
   const [modalState, setModalState] = useState(
     "modal-one" | "modal-two" | "modal-three" | "close"
   );
+  // Declare modal 1
   const handleShowModalOne = () => {
     setModalState("modal-one");
   };
-
+  //Declare modal 2
   const handleShowModalTwo = () => {
     setModalState("modal-two");
   };
-
+  //Declare modal 3
   const handleShowModalThree = () => {
     setModalState("modal-three");
   };
+  // What happens on modal close
   const handleClose = () => {
     setModalState("close");
   };

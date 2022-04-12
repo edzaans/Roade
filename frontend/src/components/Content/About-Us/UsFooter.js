@@ -1,9 +1,11 @@
+// Import styles
 import "./UsFooter.css";
 
 // Image assets
 const us1 = require("../../../assets/Images_Custom/contact.png");
 const us2 = require("../../../assets/images/usFooter2.png");
 
+//Main function
 function UsFooter() {
   return (
     <div>

@@ -7,6 +7,7 @@ import Loading from "../../components/Loading";
 import ErrorMessage from "../../components/ErrorMessage";
 import ReactMarkdown from "react-markdown";
 
+/// Main function for creating POSTS
 function CreatePost({ history }) {
   const [company, setCompany] = useState("");
   const [title, setTitle] = useState("");

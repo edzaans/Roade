@@ -6,7 +6,7 @@ import { updateProfile } from "../../actions/userActions";
 import ErrorMessage from "../../components/ErrorMessage";
 import Loading from "../../components/Loading";
 import MainScreen from "../../components/MainScreen";
-
+// Main function
 const Profile = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

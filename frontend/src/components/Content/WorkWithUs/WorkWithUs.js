@@ -1,5 +1,6 @@
 // Import CSSS
 import "./WorkWithUs.css";
+// Import assets
 import video from "../../../assets/Images_Custom/Intro/RoadeIntroWebsite.mp4";
 // Import Bootstrap components
 import { Button, Col, Row } from "react-bootstrap";
@@ -9,6 +10,7 @@ const signup = require("../../../assets/images/usFooter1.png");
 const login = require("../../../assets/Images_Custom/login.png");
 const intro = require("../../../assets/Images_Custom/Intro/RoadeIntroWebsite.mp4");
 
+// Main function
 function WorkWithUs() {
   return (
     <div className="container">

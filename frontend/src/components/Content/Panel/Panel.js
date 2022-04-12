@@ -5,6 +5,7 @@ import "./Panel.css";
 const signup = require("../../../assets/images/usFooter1.png");
 const login = require("../../../assets/Images_Custom/login.png");
 
+// Main function
 function Panel() {
   return (
     <div>

@@ -1,3 +1,4 @@
+// Import USER functions from Constants file
 import {
   USER_LOGIN_FAIL,
   USER_LOGIN_REQUEST,
@@ -12,11 +13,13 @@ import {
 } from "../constants/userConstants";
 import axios from "axios";
 
+// Login function
 export const login = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: USER_LOGIN_REQUEST });
-
+    // Create config
     const config = {
+      // Add headers to be sent (Application/json)
       headers: {
         "Content-type": "application/json",
       },
@@ -29,7 +32,7 @@ export const login = (email, password) => async (dispatch) => {
     );
 
     dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
-
+    // Set local storage USER INFO
     localStorage.setItem("userInfo", JSON.stringify(data));
   } catch (error) {
     dispatch({
@@ -42,11 +45,13 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
+// Logout function
 export const logout = () => async (dispatch) => {
   localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
 };
 
+// Registration function
 export const register =
   (name, email, number, password, picture) => async (dispatch) => {
     try {
@@ -80,6 +85,7 @@ export const register =
     }
   };
 
+// USER UPDATE function
 export const updateProfile = (user) => async (dispatch, getState) => {
   try {
     dispatch({ type: USER_UPDATE_REQUEST });

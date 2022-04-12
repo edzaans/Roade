@@ -1,4 +1,4 @@
-import React from "react";
+// Import Bootstrap components
 import { Carousel, Image, Container, Row } from "react-bootstrap";
 import "./Slide.css";
 

@@ -1,5 +1,8 @@
+// Import Axios
 import Axios from "axios";
+// Import useState and useEffect
 import { useState, useEffect } from "react";
+// Import Bootstrap components
 import { Accordion, Badge, Row, Col } from "react-bootstrap";
 
 // Import Main Screen

@@ -1,4 +1,6 @@
+// Import useRef
 import React, { useRef } from "react";
+// Import EMAILJS dependancy
 import emailjs from "emailjs-com";
 // Import CSS
 import "./Contact.css";
@@ -11,12 +13,15 @@ import { FcContacts } from "react-icons/fc";
 // Contact Us header picture
 const contact = require("../../assets/images/ContactUs.jpg");
 
+// Main function
 export const Contact = () => {
   const form = useRef();
 
+  // Form functionality here
   const sendEmail = (e) => {
+    // Prevents page reload
     e.preventDefault();
-
+    // Use tempate created with EMAILJS, add credentials
     emailjs
       .sendForm(
         "service_iszz07n",
@@ -150,7 +155,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      {/* Email_JS working form  */}
+      {/* Email_JS working form, use to debug in case of errors  */}
       {/*    <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
         <input type="text" name="user_name" />

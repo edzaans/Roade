@@ -1,8 +1,3 @@
-import React from "react";
-
-// Import icons
-import { BiUserCircle } from "react-icons/bi";
-
 // import Headers styles
 import "./Header.css";
 // Import all Bootstrap classes
@@ -14,11 +9,6 @@ import {
   FormControl,
   Container,
 } from "react-bootstrap";
-
-// Import Icons
-import { RiLoginBoxLine } from "react-icons/ri";
-import { CgProfile } from "react-icons/cg";
-import { MdOutlineLogin } from "react-icons/md";
 
 // Import dependancies
 import { useDispatch, useSelector } from "react-redux";
@@ -84,11 +74,7 @@ function Header({ setSearch }) {
                   RSA
                 </Link>
               </Nav.Link>
-              {/*        <Nav.Link>
-                <Link to="/testPosts" style={{ textDecoration: "none" }}>
-                  Test Posts
-                </Link>
-              </Nav.Link> */}
+
               <Nav.Link>
                 <Link to="/contact" className="nav-links">
                   Contact Us
@@ -105,7 +91,7 @@ function Header({ setSearch }) {
                 </Nav.Link>
 
                 <NavDropdown
-                  title={userInfo?.name} /* {<BiUserCircle />} */
+                  title={userInfo?.name}
                   id="navbarScrollingDropdown"
                   className="user_info"
                 >

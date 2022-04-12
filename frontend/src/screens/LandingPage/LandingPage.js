@@ -1,14 +1,15 @@
+// Import styles
 import "./LandingPage.css";
-
+// Import Components
 import Slide from "../../components/Slide/Slide";
 import Cards from "../../components/Content/Cards/Cards";
-
 import WorkWithUs from "../../components/Content/WorkWithUs/WorkWithUs";
 import Panel from "../../components/Content/Panel/Panel";
 import Gallery_Carousel from "../../components/Content/Gallery/Gallery_Carousel";
-
+// Import useEffect
 import { useEffect } from "react";
 
+// Main function
 function LandingPage({ history }) {
   // UseEffect to check local storage for user info and push back to POSTS
   useEffect(() => {
